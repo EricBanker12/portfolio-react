@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Hemlet from 'react-helmet'
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import DisplayImage from './../assets/images/main_image.jpg'
@@ -21,20 +22,32 @@ class SiteIndex extends React.Component {
           <meta name="description" content={siteDescription} />
         </Hemlet>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-          eget arcu dictum varius duis. Vestibulum lectus mauris ultrices eros
-          in cursus turpis. Blandit volutpat maecenas volutpat blandit aliquam
-          etiam. Sagittis purus sit amet volutpat. Nullam ac tortor vitae purus
-          faucibus ornare suspendisse. Vulputate sapien nec sagittis aliquam
-          malesuada. Quis imperdiet massa tincidunt nunc pulvinar sapien et
-          ligula ullamcorper. Sit amet cursus sit amet dictum sit amet.
-          Malesuada proin libero nunc consequat interdum varius sit amet. Sed
-          egestas egestas fringilla phasellus faucibus scelerisque eleifend.
-          Habitasse platea dictumst quisque sagittis. Sem viverra aliquet eget
-          sit amet tellus cras adipiscing enim. Amet massa vitae tortor
-          condimentum lacinia quis vel eros donec.
+          Initially, I majored in biology to pursue a career
+          in research. However, I am now working in web and software development.
         </p>
+        <p>
+          Prior to 2018, most of my programming experience came from my hobby
+          of creating tools and mods for video games. Towards the end of my
+          enrollment at Southern Illinois University Edwardsville,
+          I started focusing more on programming for data science in R and python,
+          and supplementing my studies with coursera.org online courses.
+        </p>
+        <p>
+          But after losing my brother to cancer and feeling frustrations with slow
+          progression of research, I decided to pursue a career in the fast paced
+          tech industry. This led me to attending Lambda School training in
+          full-stack web development.
+        </p>
+        <p>
+          Today I boast a wide range of technical skills such as my strong background
+          in HTML, CSS, JavaScript, React, Node.js, Express, and Jest. I have additional
+          background in R, Python, Java, C, and more from university and self-study.
+          I want to use my array of technical skills and biology background to improve
+          people's lives in a fast-paced environment where I can see my efforts take shape.
+        </p>
+        <div style={{textAlign:'right'}}>
+          <Link to={'/skills'}><FaArrowRight/></Link>
+        </div>
         <img src={DisplayImage} alt={siteTitle} />
       </Layout>
     )

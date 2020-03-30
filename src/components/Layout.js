@@ -28,7 +28,6 @@ class Layout extends React.Component {
       <div style={finalStyle}>
         <Header />
         <Navbar />
-        <br />
         {children}
         <Footer />
       </div>

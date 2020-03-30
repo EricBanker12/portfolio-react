@@ -46,7 +46,7 @@ class SiteIndex extends React.Component {
           people's lives in a fast-paced environment where I can see my efforts take shape.
         </p>
         <div style={{textAlign:'right'}}>
-          <Link to={'/skills'}><FaArrowRight/></Link>
+          <Link to={'/skills'}>Skills <FaArrowRight/></Link>
         </div>
         <img src={DisplayImage} alt={siteTitle} />
       </Layout>

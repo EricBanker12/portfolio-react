@@ -1,10 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
+import { Table, TableBody, TableCell, TableHead, TableRow, TableSortLabel } from '@material-ui/core'
+import { FaStar, FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import skillsData from './../data/skills'
+
+function BlueStar() {
+  return <FaStar style={{color: '#4078c0'}} />
+}
 
 class Skills extends React.Component {
   render() {
@@ -23,15 +29,49 @@ class Skills extends React.Component {
         />
 
         <h2>Skills</h2>
-        <br />
+        <p>Proficiency: <BlueStar/>-Some, <BlueStar/><BlueStar/>-Good, <BlueStar/><BlueStar/><BlueStar/>-Excellent</p>
 
-        {Object.keys(skillsData).map(key => {
-          if (skillsData[key]) {
-            return (
-              <p>{key}: {skillsData[key]}</p>
-            )
-          }
-        })}
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                <TableSortLabel active={true} direction='asc'>
+                  Technology
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                  Category
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                  Proficiency
+                </TableSortLabel>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {skillsData.map((skill, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  {skill.technology}
+                </TableCell>
+                <TableCell>
+                  {skill.category}
+                </TableCell>
+                <TableCell>
+                  {Array.from({length: skill.proficiency}).map((_, i) => <BlueStar key={i}/>)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        
+        <div style={{textAlign:'right'}}>
+          <Link to={'/portfolio'}>Portfolio <FaArrowRight/></Link>
+        </div>
+
       </Layout>
     )
   }

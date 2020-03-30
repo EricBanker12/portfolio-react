@@ -35,10 +35,17 @@ class Skills extends React.Component {
   }
 
   sortTableHandler = (a, b) => {
-    // equal
-    if (a[this.state.activeLabel] === b[this.state.activeLabel]) return 0
-    // less than
-    if (a[this.state.activeLabel] < b[this.state.activeLabel]) {
+    a = a[this.state.activeLabel]
+    b = b[this.state.activeLabel]
+
+    if (typeof a === 'string') {
+      a = a.toLowerCase()
+      b = b.toLowerCase()
+    }
+
+    if (a === b) return 0
+
+    if (a < b) {
       if (this.state.activeDirection === 'asc') {
         return 1
       }
@@ -46,8 +53,8 @@ class Skills extends React.Component {
         return -1
       }
     }
-    // greater than
-    if (a[this.state.activeLabel] > b[this.state.activeLabel]) {
+
+    if (a > b) {
       if (this.state.activeDirection === 'asc') {
         return -1
       }

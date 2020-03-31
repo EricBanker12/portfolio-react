@@ -1,7 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import educationData from './../data/education'
@@ -38,6 +39,11 @@ class Education extends React.Component {
             </ul>
           </div>
         ))}
+
+        <p style={{textAlign:'right'}}>
+          <Link to={'/blog'}>&nbsp;Blog <FaArrowRight/></Link>
+        </p>
+
       </Layout>
     )
   }

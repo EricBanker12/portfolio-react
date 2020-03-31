@@ -19,19 +19,25 @@ class Education extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`Contact | ${siteTitle}`}
+          title={`Education | ${siteTitle}`}
         />
 
         <h2>Education</h2>
-        <br />
 
-        {Object.keys(educationData).map(key => {
-          if (educationData[key]) {
-            return (
-              <p>{key}: {educationData[key]}</p>
-            )
-          }
-        })}
+        {educationData.map((data, index) => (
+          <div key={index}>
+            <h4>{data.title}</h4>
+            {data.paragraphs.map((paragraphs, i) => (
+              <p key={i}>{paragraphs}</p>
+            ))}
+            <ul>
+              {data.bullets.map((bullet, i) => {
+                if (typeof bullet === 'string') return <li key={i}>{bullet}</li>
+                else return <li key={i}><a href={bullet.link}>{bullet.text}</a></li>
+              })}
+            </ul>
+          </div>
+        ))}
       </Layout>
     )
   }

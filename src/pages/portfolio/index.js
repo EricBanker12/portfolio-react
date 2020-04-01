@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../../components/Layout'
 import portfolioData from './../../data/portfolio'
@@ -23,7 +24,8 @@ class portfolioIndex extends React.Component {
           title={`Portfolio | ${siteTitle}`}
         />
         <h2>Portfolio</h2>
-        <br />
+        <p>Click on a project to view details.</p>
+
         <div
           style={{
             textAlign: 'center',
@@ -43,8 +45,8 @@ class portfolioIndex extends React.Component {
                     >
                       <div
                         style={{
-                          width: 250,
-                          height: 200,
+                          width: 320,
+                          height: 180,
                           margin: 10,
                           background: `url(${p.image})`,
                           backgroundSize: 'cover',
@@ -59,6 +61,10 @@ class portfolioIndex extends React.Component {
             </Row>
           </Grid>
         </div>
+
+        <p style={{textAlign:'right'}}>
+          <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
+        </p>
       </Layout>
     )
   }

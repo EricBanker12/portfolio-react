@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
+import { FaArrowLeft } from 'react-icons/fa'
 
 import Layout from './../../components/Layout'
 
@@ -16,9 +17,9 @@ export class view extends Component {
     return (
       <Layout>
         <Helmet>
-          <title>{`${title} | Sai Krishna`}</title>
+          <title>{`${title} | Eric Banker's Portfolio`}</title>
         </Helmet>
-        <Link to="/portfolio">&larr; back</Link>
+        <Link to="/portfolio"><FaArrowLeft/> Back&nbsp;</Link>
         <h2>{title}</h2>
         <img src={image} />
         <div>

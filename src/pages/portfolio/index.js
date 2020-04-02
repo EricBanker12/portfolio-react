@@ -26,16 +26,12 @@ class portfolioIndex extends React.Component {
         <h2>Portfolio</h2>
         <p>Click on a project to view details.</p>
 
-        <div
-          style={{
-            textAlign: 'center',
-          }}
-        >
+        <div style={{textAlign: 'center'}}>
           <Grid fluid>
             <Row>
-              {portfolioData.map(p => (
+              {portfolioData.map((p, i) => (
                 <Col xs={12} sm={12} md={6} lg={6} key={p.title}>
-                  <Link to={'/portfolio/view'} state={p} key={p.title}>
+                  <Link to={`/portfolio/view?id=${i}`} state={p} key={p.title}>
                     <div
                       style={{
                         display: 'flex',

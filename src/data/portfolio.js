@@ -5,35 +5,19 @@ import Image3 from './../assets/images/image3.jpg'
 const data = [
   {
     title: 'Project 1',
-    website: 'https://example.com',
-    description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`,
     image: Image1,
+    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
+    eget arcu dictum varius duis.`],
+    bullets: ['https://example.com'],
   },
   {
     title: 'Project 2',
-    website: 'https://example.com',
-    description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`,
-    image: Image2,
-  },
-  {
-    title: 'Project 3',
-    website: 'https://example.com',
-    description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`,
-    image: Image3,
-  },
-  {
-    title: 'Project 4',
-    website: 'https://example.com',
-    description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`,
     image: Image1,
+    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
+    eget arcu dictum varius duis.`],
+    bullets: ['https://example.com'],
   },
 ]
 

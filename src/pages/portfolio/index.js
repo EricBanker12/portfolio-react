@@ -53,7 +53,7 @@ class portfolioIndex extends React.Component {
                     </div>
                   </Link>
                 </Col>
-              ))}
+              )).reverse()}
             </Row>
           </Grid>
         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -21,19 +22,9 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <Link to="/blog">&larr; Blog</Link>
+        <Link to="/blog"><FaArrowLeft/> Blog&nbsp;</Link>
         <h1>{post.frontmatter.title}</h1>
-        <br />
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
+        <p>{post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -53,14 +44,14 @@ class BlogPostTemplate extends React.Component {
           <li>
             {previous && (
               <Link to={previous.frontmatter.path} rel="prev">
-                ← {previous.frontmatter.title}
+                <FaArrowLeft/> {previous.frontmatter.title}&nbsp;
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.frontmatter.path} rel="next">
-                {next.frontmatter.title} →
+                &nbsp;{next.frontmatter.title} <FaArrowRight/>
               </Link>
             )}
           </li>

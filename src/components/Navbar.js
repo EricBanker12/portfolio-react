@@ -30,7 +30,7 @@ export class Navbar extends Component {
           <Link to={'/skills'}><FaCog /> Skills&nbsp;</Link>
           <Link to={'/portfolio'}><FaShapes /> Portfolio&nbsp;</Link>
           <Link to={'/education'}><FaGraduationCap /> Education&nbsp;</Link>
-          <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link>
+          {/* <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link> */}
         </div>
       </div>
     )

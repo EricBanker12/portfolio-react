@@ -40,9 +40,9 @@ class Education extends React.Component {
           </div>
         ))}
 
-        <p style={{textAlign:'right'}}>
+        {/* <p style={{textAlign:'right'}}>
           <Link to={'/blog'}>&nbsp;Blog <FaArrowRight/></Link>
-        </p>
+        </p> */}
 
       </Layout>
     )

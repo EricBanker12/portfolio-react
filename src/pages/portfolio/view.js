@@ -17,7 +17,7 @@ export class view extends Component {
 
     const params = new URLSearchParams(this.props.location.search)
     const passedData = this.props.location.state || portfolioData[params.get('id')]
-    const { title, image, paragraphs, bullets } = passedData
+    const { title, image, video, paragraphs, bullets } = passedData
 
     return (
       <Layout>
@@ -28,7 +28,13 @@ export class view extends Component {
         />
         <Link to="/portfolio"><FaArrowLeft/> Back&nbsp;</Link>
         <h2>{title}</h2>
-        <img src={image} />
+        {!video && <img src={image} />}
+        {video && (
+          <video controls style={{width: '100%'}}>
+            <source src={video} />
+            <img src={image} />
+          </video>
+        )}
         {paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
         <ul>
           {bullets.map((bullet, i) => {

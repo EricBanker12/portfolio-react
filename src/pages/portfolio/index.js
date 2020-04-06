@@ -23,7 +23,12 @@ class portfolioIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Portfolio | ${siteTitle}`}
         />
-        <h2>Portfolio</h2>
+        <header style={{position: 'relative'}}>
+          <h2>Portfolio</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
+          </p>
+        </header>
         <p>Click on a project to view details.</p>
 
         <div style={{textAlign: 'center'}}>
@@ -50,6 +55,7 @@ class portfolioIndex extends React.Component {
                         }}
                       />
                       <p>{p.title}</p>
+                      <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>
                 </Col>
@@ -57,10 +63,6 @@ class portfolioIndex extends React.Component {
             </Row>
           </Grid>
         </div>
-
-        <p style={{textAlign:'right'}}>
-          <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
-        </p>
       </Layout>
     )
   }

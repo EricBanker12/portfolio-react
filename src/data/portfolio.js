@@ -8,20 +8,36 @@ import Image6 from './../assets/images/Image6.jpg'
 
 const data = [
   {
-    title: 'Project 1',
+    title: 'Wunderlist 2.0',
     image: Image1,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
+    paragraphs: [`An online to-do list, Wunderlist 2.0 is a web app for
+    creating and updating your tasks.`],
+    bullets: [
+      'Constructed a fully responsive marketing site for desktop and mobile devices.',
+      'Designed pages in coordinatation with a UX Designer over a 4 day period.',
+      'Built using HTML5, CSS3, and LESS.',
+      {
+        link: 'https://github.com/Wunderlist-bw/User-Interface/tree/eric-banker',
+        text: 'GitHub Repository',
+      }
+    ],
+    website: 'https://brave-goldwasser-c0f535.netlify.com/',
   },
   {
-    title: 'Project 2',
+    title: 'My Top Nine',
     image: Image2,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
+    paragraphs: [`An online favorites list, My Top Nine allows users to create
+    accounts and form categorized lists of up to 9 items.`],
+    bullets: [
+      'Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling.',
+      'Programmed functional, state managed forms for creation and editing of categorized list entries.',
+      'Built using React and Bootstrap.',
+      {
+        link: 'https://github.com/bw-my-top-nine/front-end',
+        text: 'GitHub Repository',
+      }
+    ],
+    website: 'https://my-top-nine-app.netlify.com/',
   },
   {
     title: 'Project 3',
@@ -30,6 +46,7 @@ const data = [
     eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
     eget arcu dictum varius duis.`],
     bullets: ['https://example.com'],
+    website: '',
   },
   {
     title: 'Project 4',
@@ -38,6 +55,7 @@ const data = [
     eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
     eget arcu dictum varius duis.`],
     bullets: ['https://example.com'],
+    website: '',
   },
   {
     title: 'Project 5',
@@ -47,6 +65,7 @@ const data = [
     eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
     eget arcu dictum varius duis.`],
     bullets: ['https://example.com'],
+    website: '',
   },
   {
     title: 'Project 6',
@@ -55,6 +74,7 @@ const data = [
     eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
     eget arcu dictum varius duis.`],
     bullets: ['https://example.com'],
+    website: '',
   },
 ]
 

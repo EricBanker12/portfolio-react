@@ -23,7 +23,12 @@ class Education extends React.Component {
           title={`Education | ${siteTitle}`}
         />
 
-        <h2>Education</h2>
+        <header style={{position: 'relative'}}>
+          <h2>Education</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            {/* <Link to={'/blog'}>&nbsp;Blog <FaArrowRight/></Link> */}
+          </p>
+        </header>
 
         {educationData.map((data, index) => (
           <div key={index}>
@@ -39,10 +44,6 @@ class Education extends React.Component {
             </ul>
           </div>
         ))}
-
-        {/* <p style={{textAlign:'right'}}>
-          <Link to={'/blog'}>&nbsp;Blog <FaArrowRight/></Link>
-        </p> */}
 
       </Layout>
     )

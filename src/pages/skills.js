@@ -79,7 +79,13 @@ class Skills extends React.Component {
           title={`Skills | ${siteTitle}`}
         />
 
-        <h2>Skills</h2>
+        <header style={{position: 'relative'}}>
+          <h2>Skills</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            <Link to={'/portfolio'}>&nbsp;Portfolio <FaArrowRight/></Link>
+          </p>
+        </header>
+
         <span>
           Proficiency:&nbsp;
           <BlueStar/>-Some,&nbsp;
@@ -145,10 +151,6 @@ class Skills extends React.Component {
             </TableBody>
           </Table>
         </ThemeProvider>
-        
-        <p style={{textAlign:'right'}}>
-          <Link to={'/portfolio'}>&nbsp;Portfolio <FaArrowRight/></Link>
-        </p>
 
       </Layout>
     )

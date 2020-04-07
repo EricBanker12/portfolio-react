@@ -21,7 +21,14 @@ class SiteIndex extends React.Component {
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Hemlet>
-        <h2>Home</h2>
+
+        <header style={{position: 'relative'}}>
+          <h2>Home</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            <Link to={'/skills'}>&nbsp;Skills <FaArrowRight/></Link>
+          </p>
+        </header>
+
         <p>
           Initially, I majored in biology to pursue a career
           in research. However, I am now working in web and software development.
@@ -46,10 +53,9 @@ class SiteIndex extends React.Component {
           I want to use my array of technical skills and biology background to improve
           people's lives in a fast-paced environment where I can see my efforts take shape.
         </p>
-        <p style={{textAlign:'right'}}>
-          <Link to={'/skills'}>&nbsp;Skills <FaArrowRight/></Link>
-        </p>
+
         <img src={DisplayImage} alt={siteTitle} />
+
       </Layout>
     )
   }

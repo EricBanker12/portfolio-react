@@ -28,7 +28,7 @@ export class view extends Component {
         />
         <Link to="/portfolio"><FaArrowLeft/> Back&nbsp;</Link>
         <h2><a href={website}>{title}</a></h2>
-        {!video && <img src={image} />}
+        {!video && <a href={website}><img src={image} alt={title} /></a>}
         {video && (
           <video controls style={{width: '100%'}}>
             <source src={video} />

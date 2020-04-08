@@ -19,7 +19,7 @@ const data = [
       {
         link: 'https://github.com/Wunderlist-bw/User-Interface/tree/eric-banker',
         text: 'GitHub Repository',
-      }
+      },
     ],
     website: 'https://brave-goldwasser-c0f535.netlify.com/',
   },
@@ -29,52 +29,104 @@ const data = [
     paragraphs: [`An online favorites list, My Top Nine allows users to create
     accounts and form categorized lists of up to 9 items.`],
     bullets: [
+      `Performed as a front-end developer on a remote team of 5 consisting of 1 UI developer,
+      3 front-end developers, and 1 back-end developer.`,
       'Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling.',
       'Programmed functional, state managed forms for creation and editing of categorized list entries.',
       'Built using React and Bootstrap.',
       {
         link: 'https://github.com/bw-my-top-nine/front-end',
         text: 'GitHub Repository',
-      }
+      },
     ],
     website: 'https://my-top-nine-app.netlify.com/',
   },
   {
-    title: 'Project 3',
+    title: 'Gigapet',
     image: Image3,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
-    website: '',
+    paragraphs: [`Gigapet is a web app for parents to track the eating habits of their children
+    while motivating the kids by giving their digital pet energy with every meal.`],
+    bullets: [
+      `Performed as a front-end developer on a remote team of 6 consisting of 1 UI developer,
+      3 front-end developers, 1 back-end developer, and 1 UX Designer.`,
+      'Programmed modal popups, meal selection, meal history, and pet CSS animations.',
+      'Iorporated Redux for state management and worked with functional and classical React components',
+      'Built using React, Redux, and CSS.',
+      {
+        link: 'https://github.com/BW-Gigapet/Frontend',
+        text: 'GitHub Repository',
+      },
+    ],
+    website: 'https://giga-pet.netlify.com/',
   },
   {
-    title: 'Project 4',
+    title: 'Empowerd Conversations',
     image: Image4,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
-    website: '',
+    paragraphs: [`Empowerd Conversations is a web app that acts as an ice-breaker for
+    sensitive discussions by preparing the recipient with conversational advice prior
+    to starting the interpersonal communication.`],
+    bullets: [
+      `Performed as the sole back-end developer on a remote team of 4 consisting of 1 UI developer,
+      2 front-end developers, 1 back-end developer.`,
+      'Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.',
+      `Wrote a complete REST-ful API with detailed documentation and testing, and communicted with a
+      PostgreSQL database and a 3rd party Twilio API for text messaging.`,
+      'Built using Node.js, Express, Knex.js, Jest, SuperTest, Authentication (JWT), and PostgreSQL.',
+      {
+        link: 'https://github.com/BW-EmpoweredConversations/Back-End',
+        text: 'GitHub Repository',
+      },
+    ],
+    website: 'https://romantic-shannon-065344.netlify.com/Start',
   },
   {
-    title: 'Project 5',
+    title: 'Story Squad',
     image: Image5,
     video: Video5,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
-    website: '',
+    paragraphs: [
+      `Story Squad is a progressive web app for encouraging young children to sharpen
+      their language, drawing, teamwork, and critical thinking skills through weekly competition.`,
+      `In the video above (if supported by your browser), I present the project details (0:00-1:50)
+      and showcase the web application (1:50-5:08) following my team's 2 months of work.`,
+    ],
+    bullets: [
+      `Built to the specifications of our stakeholder Story Squad, LLC., on a remote, crossfunctional
+      team of 1 UX Designer, 5 Full-Stack Developers, and later, 3 Data Scientists, over a 2 month period.`,
+      `Designed and implemented the back-end API and front-end interface for admin user management
+      and child user reception of the weekly competition prompts.`,
+      `Coded the API and interface for COPPA-compliant child user submissions in coordination with
+      Data Scientists for scanned handwriting to text conversion.`,
+      `Wrote large contributions to wiki documentation for components, pages, middleware, utils, and
+      database migrations.`,
+      'Built using Typescript, React, Material-UI, Node.js, TypeORM, Stripe, Jest, and SuperTest',
+      {
+        link: 'https://github.com/Lambda-School-Labs/story-squad-be',
+        text: 'Back-End GitHub Repository',
+      },
+      {
+        link: 'https://github.com/Lambda-School-Labs/story-squad-fe',
+        text: 'Front-End GitHub Repository',
+      },
+    ],
+    website: 'https://story-squad.netlify.com/',
   },
   {
-    title: 'Project 6',
+    title: 'Tower Maze',
     image: Image6,
-    paragraphs: [` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue
-    eget arcu dictum varius duis.`],
-    bullets: ['https://example.com'],
-    website: '',
+    paragraphs: [`Tower Maze is a real-time, multiplayer maze exploration game
+    utilizing websockets and depth-first traversal maze generation.`],
+    bullets: [
+      `Performed as a full-stack developer on a remote team of 5 full-stack developers.`,
+      'Programmed and optimized back-end world and maze generation working around database limitations.',
+      `Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and
+      mobile devices, and programmed keyboard input for the Angular front-end.`,
+      'Built using Python3, Django, Typescript, Angular, HTML5',
+      {
+        link: 'https://github.com/tower-maze',
+        text: 'GitHub Repositories',
+      },
+    ],
+    website: 'https://tower-maze.netlify.com/',
   },
 ]
 

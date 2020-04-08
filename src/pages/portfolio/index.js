@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../../components/Layout'
 import portfolioData from './../../data/portfolio'
@@ -22,18 +23,20 @@ class portfolioIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Portfolio | ${siteTitle}`}
         />
-        <h2>Portfolio</h2>
-        <br />
-        <div
-          style={{
-            textAlign: 'center',
-          }}
-        >
+        <header style={{position: 'relative'}}>
+          <h2>Portfolio</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
+          </p>
+        </header>
+        <p>Click on a project to view details.</p>
+
+        <div style={{textAlign: 'center'}}>
           <Grid fluid>
             <Row>
-              {portfolioData.map(p => (
+              {portfolioData.map((p, i) => (
                 <Col xs={12} sm={12} md={6} lg={6} key={p.title}>
-                  <Link to={'/portfolio/view'} state={p} key={p.title}>
+                  <Link to={`/portfolio/view?id=${i}`} state={p} key={p.title}>
                     <div
                       style={{
                         display: 'flex',
@@ -43,8 +46,8 @@ class portfolioIndex extends React.Component {
                     >
                       <div
                         style={{
-                          width: 250,
-                          height: 200,
+                          width: 320,
+                          height: 180,
                           margin: 10,
                           background: `url(${p.image})`,
                           backgroundSize: 'cover',
@@ -52,10 +55,11 @@ class portfolioIndex extends React.Component {
                         }}
                       />
                       <p>{p.title}</p>
+                      <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>
                 </Col>
-              ))}
+              )).reverse()}
             </Row>
           </Grid>
         </div>

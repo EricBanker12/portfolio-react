@@ -21,6 +21,12 @@ function BlueStar() {
 class Skills extends React.Component {
   state = {activeLabel: 'technology', activeDirection: 'desc'}
 
+  componentDidMount = () => {
+    // on first render, sort by technology descending then by proficiency ascending
+    skillsData.sort(this.sortTableHandler)
+    this.setState({activeLabel: 'proficiency', activeDirection: 'asc'})
+  }
+
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
     if (this.state.activeLabel === name) {

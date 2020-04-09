@@ -33,7 +33,7 @@ const data = [
       3 front-end developers, and 1 back-end developer.`,
       'Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling.',
       'Programmed functional, state managed forms for creation and editing of categorized list entries.',
-      'Built using React and Bootstrap.',
+      'Built using Axios, Bootstrap, and React.',
       {
         link: 'https://github.com/bw-my-top-nine/front-end',
         text: 'GitHub Repository',
@@ -51,7 +51,7 @@ const data = [
       3 front-end developers, 1 back-end developer, and 1 UX Designer.`,
       'Programmed modal popups, meal selection, meal history, and pet CSS animation.',
       'Incorporated Redux for state management and worked with both functional and classical React components',
-      'Built using React, Redux, and CSS.',
+      'Built using Axios, React, Redux, and Styled Components.',
       {
         link: 'https://github.com/BW-Gigapet/Frontend',
         text: 'GitHub Repository',
@@ -71,7 +71,7 @@ const data = [
       'Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.',
       `Wrote a complete REST-ful API with detailed documentation and testing, and communicted with a
       PostgreSQL database and a 3rd party Twilio API for text messaging.`,
-      'Built using Node.js, Express, Knex.js, Twilio, Jest, SuperTest, and Authentication (JWT).',
+      'Built using BCrypt, Express, Jest, JSON Web Tokens (JWT), Knex, Markdown, Node, SuperTest, and Twilio.',
       {
         link: 'https://github.com/BW-EmpoweredConversations/Back-End',
         text: 'GitHub Repository',
@@ -98,7 +98,7 @@ const data = [
       data scientists for scanned handwriting to text conversion.`,
       `Wrote large contributions to wiki documentation for components, pages, middleware, utils, and
       database schema and migrations.`,
-      'Built using Typescript, React, Material-UI, Node.js, Express, TypeORM, Stripe, Jest, and SuperTest',
+      'Built using Axios, BCrypt, Express, Jest, Markdown, Material-UI, Node, React, SuperTest, TypeORM, and Typescript.',
       {
         link: 'https://github.com/Lambda-School-Labs/story-squad-be',
         text: 'Back-End GitHub Repository',
@@ -120,7 +120,7 @@ const data = [
       'Programmed and optimized back-end world and maze generation working around database limitations.',
       `Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and
       mobile devices, and programmed keyboard input for the Angular front-end.`,
-      'Built using Python, Django, Typescript, Angular, and Material-UI',
+      'Built using Angular, Django, Material-UI, Python, and Typescript.',
       {
         link: 'https://github.com/tower-maze',
         text: 'GitHub Repositories',

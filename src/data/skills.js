@@ -194,6 +194,21 @@ const data = [
     category: 'Data Science',
     proficiency: 1,
   },
+  {
+    technology: 'Styled Components',
+    category: 'Web Development (Front-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'BCrypt',
+    category: 'Web Development (Back-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'Markdown',
+    category: 'Computer Science',
+    proficiency: 3,
+  },
 ]
 
 export default data

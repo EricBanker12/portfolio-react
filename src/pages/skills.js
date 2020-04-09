@@ -21,6 +21,12 @@ function BlueStar() {
 class Skills extends React.Component {
   state = {activeLabel: 'technology', activeDirection: 'desc'}
 
+  componentDidMount = () => {
+    // on first render, sort by technology descending then by proficiency ascending
+    skillsData.sort(this.sortTableHandler)
+    this.setState({activeLabel: 'proficiency', activeDirection: 'asc'})
+  }
+
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
     if (this.state.activeLabel === name) {
@@ -79,7 +85,13 @@ class Skills extends React.Component {
           title={`Skills | ${siteTitle}`}
         />
 
-        <h2>Skills</h2>
+        <header style={{position: 'relative'}}>
+          <h2>Skills</h2>
+          <p style={{position: 'absolute', top:0, right:0}}>
+            <Link to={'/portfolio'}>&nbsp;Portfolio <FaArrowRight/></Link>
+          </p>
+        </header>
+
         <span>
           Proficiency:&nbsp;
           <BlueStar/>-Some,&nbsp;
@@ -145,10 +157,6 @@ class Skills extends React.Component {
             </TableBody>
           </Table>
         </ThemeProvider>
-        
-        <p style={{textAlign:'right'}}>
-          <Link to={'/portfolio'}>&nbsp;Portfolio <FaArrowRight/></Link>
-        </p>
 
       </Layout>
     )

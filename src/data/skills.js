@@ -15,8 +15,8 @@ const data = [
     proficiency: 3,
   },
   {
-    technology: 'Node.js',
-    category: 'Web Development (Back-End)',
+    technology: 'Node',
+    category: 'Web Development',
     proficiency: 3,
   },
   {
@@ -27,12 +27,12 @@ const data = [
   {
     technology: 'Jest',
     category: 'Web Development',
-    proficiency: 3,
+    proficiency: 2,
   },
   {
     technology: 'SASS',
     category: 'Web Development (Front-End)',
-    proficiency: 3,
+    proficiency: 2,
   },
   {
     technology: 'TypeScript',
@@ -45,8 +45,8 @@ const data = [
     proficiency: 1,
   },
   {
-    technology: 'Git',
-    category: 'Web Development',
+    technology: 'Git Bash',
+    category: 'Computer Science',
     proficiency: 3,
   },
   {
@@ -90,7 +90,7 @@ const data = [
     proficiency: 2,
   },
   {
-    technology: 'Knex.js',
+    technology: 'Knex',
     category: 'Web Development (Back-End)',
     proficiency: 2,
   },
@@ -117,15 +117,15 @@ const data = [
   {
     technology: 'Bootstrap',
     category: 'Web Development (Front-End)',
-    proficiency: 3,
+    proficiency: 2,
   },
   {
     technology: 'Material-UI',
     category: 'Web Development (Front-End)',
-    proficiency: 1,
+    proficiency: 2,
   },
   {
-    technology: 'Angular 2',
+    technology: 'Angular',
     category: 'Web Development (Front-End)',
     proficiency: 1,
   },
@@ -142,6 +142,71 @@ const data = [
   {
     technology: 'SQLite',
     category: 'Web Development (Back-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'LESS',
+    category: 'Web Development (Front-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'Axios',
+    category: 'Web Development',
+    proficiency: 2,
+  },
+  {
+    technology: 'JSON Web Tokens (JWT)',
+    category: 'Web Development',
+    proficiency: 2,
+  },
+  {
+    technology: 'Sessions',
+    category: 'Web Development',
+    proficiency: 2,
+  },
+  {
+    technology: 'SQL',
+    category: 'Data Science',
+    proficiency: 2,
+  },
+  {
+    technology: 'Flask',
+    category: 'Web Development',
+    proficiency: 1,
+  },
+  {
+    technology: 'Pipenv',
+    category: 'Computer Science',
+    proficiency: 2,
+  },
+  {
+    technology: 'AutoHotkey',
+    category: 'Computer Science',
+    proficiency: 2,
+  },
+  {
+    technology: 'GraphQL',
+    category: 'Web Development',
+    proficiency: 1,
+  },
+  {
+    technology: 'Pandas',
+    category: 'Data Science',
+    proficiency: 1,
+  },
+  {
+    technology: 'Styled Components',
+    category: 'Web Development (Front-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'BCrypt',
+    category: 'Web Development (Back-End)',
+    proficiency: 2,
+  },
+  {
+    technology: 'Markdown',
+    category: 'Computer Science',
     proficiency: 3,
   },
 ]

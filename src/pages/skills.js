@@ -11,6 +11,7 @@ import {
   TableHead,
   TableRow,
   TableSortLabel,
+  TextField,
   ThemeProvider,
 } from '@material-ui/core'
 
@@ -24,7 +25,7 @@ const theme = createMuiTheme({
 })
 
 class Skills extends React.Component {
-  state = {activeLabel: 'technology', activeDirection: 'desc'}
+  state = {activeLabel: 'technology', activeDirection: 'desc', filter: ''}
 
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
@@ -40,6 +41,7 @@ class Skills extends React.Component {
   }
 
   sortTableHandler = (a, b) => {
+    // sorts strings alphabetically and numbers numerically
     a = a[this.state.activeLabel]
     b = b[this.state.activeLabel]
 
@@ -69,6 +71,21 @@ class Skills extends React.Component {
     }
   }
 
+  filterTableHandler = (skill) => {
+    if (!this.state.filter) return true
+    
+    try {
+      const filter = new RegExp(this.state.filter, 'i')
+      if (filter.test(skill.technology)) return true
+      if (filter.test(skill.category)) return true
+      if (filter.test(skill.field)) return true
+      return false
+    }
+    catch (err) {
+      return true
+    }
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -92,6 +109,12 @@ class Skills extends React.Component {
         </header>
 
 
+          <TextField
+            label='Filter'
+            placeholder='Type a Technology, Category, or Field. Separate multiple filters with a | character.'
+            style={{width: '100%'}}
+            value={this.state.filter}
+            onChange={(e) => {this.setState({filter: e.target.value})}} />
         <ThemeProvider theme={theme}>
           <Table>
             <TableHead>
@@ -127,6 +150,7 @@ class Skills extends React.Component {
             </TableHead>
             <TableBody>
               {skillsData
+                .filter(this.filterTableHandler)
                 .sort(this.sortTableHandler)
                 .map((skill) => (
                 <TableRow key={skill.technology}>

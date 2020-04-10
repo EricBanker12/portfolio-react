@@ -2,8 +2,18 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
-import { Table, TableBody, TableCell, TableHead, TableRow, TableSortLabel, ThemeProvider, createMuiTheme } from '@material-ui/core'
-import { FaStar, FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
+import {
+  createMuiTheme,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  TableSortLabel,
+  TextField,
+  ThemeProvider,
+} from '@material-ui/core'
 
 import Layout from '../components/Layout'
 import skillsData from './../data/skills'
@@ -14,18 +24,8 @@ const theme = createMuiTheme({
   }
 })
 
-function BlueStar() {
-  return <FaStar style={{color: '#4078c0'}} />
-}
-
 class Skills extends React.Component {
-  state = {activeLabel: 'technology', activeDirection: 'desc'}
-
-  componentDidMount = () => {
-    // on first render, sort by technology descending then by proficiency ascending
-    skillsData.sort(this.sortTableHandler)
-    this.setState({activeLabel: 'proficiency', activeDirection: 'asc'})
-  }
+  state = {activeLabel: 'technology', activeDirection: 'desc', filter: ''}
 
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
@@ -41,6 +41,7 @@ class Skills extends React.Component {
   }
 
   sortTableHandler = (a, b) => {
+    // sorts strings alphabetically and numbers numerically
     a = a[this.state.activeLabel]
     b = b[this.state.activeLabel]
 
@@ -70,6 +71,21 @@ class Skills extends React.Component {
     }
   }
 
+  filterTableHandler = (skill) => {
+    if (!this.state.filter) return true
+    
+    try {
+      const filter = new RegExp(this.state.filter, 'i')
+      if (filter.test(skill.technology)) return true
+      if (filter.test(skill.category)) return true
+      if (filter.test(skill.field)) return true
+      return false
+    }
+    catch (err) {
+      return true
+    }
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -92,13 +108,13 @@ class Skills extends React.Component {
           </p>
         </header>
 
-        <span>
-          Proficiency:&nbsp;
-          <BlueStar/>-Some,&nbsp;
-          <BlueStar/><BlueStar/>-Good,&nbsp;
-          <BlueStar/><BlueStar/><BlueStar/>-Excellent
-        </span>
 
+          <TextField
+            label='Filter'
+            placeholder='Type a Technology, Category, or Field. Separate multiple filters with a | character.'
+            style={{width: '100%'}}
+            value={this.state.filter}
+            onChange={(e) => {this.setState({filter: e.target.value})}} />
         <ThemeProvider theme={theme}>
           <Table>
             <TableHead>
@@ -108,8 +124,7 @@ class Skills extends React.Component {
                     name='technology'
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'technology'}
-                    direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}
-                  >
+                    direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
                     Technology
                   </TableSortLabel>
                 </TableCell>
@@ -118,25 +133,24 @@ class Skills extends React.Component {
                     name='category'
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'category'}
-                    direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}
-                  >
+                    direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
                     Category
                   </TableSortLabel>
                 </TableCell>
                 <TableCell>
-                <TableSortLabel
-                    name='proficiency'
+                  <TableSortLabel
+                    name='field'
                     onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'proficiency'}
-                    direction={this.state.activeLabel === 'proficiency' ? this.state.activeDirection : 'desc'}
-                  >
-                    Proficiency
+                    active={this.state.activeLabel === 'field'}
+                    direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>
+                    Field
                   </TableSortLabel>
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {skillsData
+                .filter(this.filterTableHandler)
                 .sort(this.sortTableHandler)
                 .map((skill) => (
                 <TableRow key={skill.technology}>
@@ -147,10 +161,7 @@ class Skills extends React.Component {
                     {skill.category}
                   </TableCell>
                   <TableCell>
-                    {
-                      Array.from({length: skill.proficiency})
-                        .map((_, i) => <BlueStar key={i}/>)
-                    }
+                    {skill.field}
                   </TableCell>
                 </TableRow>
               ))}

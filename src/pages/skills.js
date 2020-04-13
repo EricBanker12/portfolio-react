@@ -20,8 +20,8 @@ import skillsData from './../data/skills'
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: 'inherit'
-  }
+    font: 'inherit',
+  },
 })
 
 class Skills extends React.Component {
@@ -109,19 +109,20 @@ class Skills extends React.Component {
         </header>
 
 
+        <ThemeProvider theme={theme}>
           <TextField
             label='Filter'
             placeholder='Type a Technology, Category, or Field. Separate multiple filters with a | character.'
             style={{width: '100%'}}
             value={this.state.filter}
             onChange={(e) => {this.setState({filter: e.target.value})}} />
-        <ThemeProvider theme={theme}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>
                   <TableSortLabel
                     name='technology'
+                    style={{fontSize: '1.125rem'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'technology'}
                     direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
@@ -131,6 +132,7 @@ class Skills extends React.Component {
                 <TableCell>
                   <TableSortLabel
                     name='category'
+                    style={{fontSize: '1.125rem'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'category'}
                     direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
@@ -140,6 +142,7 @@ class Skills extends React.Component {
                 <TableCell>
                   <TableSortLabel
                     name='field'
+                    style={{fontSize: '1.125rem'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'field'}
                     direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>

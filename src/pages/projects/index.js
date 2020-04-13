@@ -42,19 +42,17 @@ class projectIndex extends React.Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                      }}
-                    >
+                      }}>
                       <div
                         style={{
                           width: 320,
                           height: 180,
-                          margin: 10,
+                          marginTop: 10,
                           background: `url(${p.image})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center center',
-                        }}
-                      />
-                      <p>{p.title}</p>
+                        }}/>
+                      <h4>{p.title}</h4>
                       <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>

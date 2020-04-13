@@ -48,7 +48,7 @@ class SiteIndex extends React.Component {
         </p>
         <p>
           Today I boast a wide range of technical skills such as my strong background
-          in HTML, CSS, JavaScript, React, Node.js, Express, and Jest. I have additional
+          in HTML, CSS, JavaScript, React, Node, Express, and Jest. I have additional
           background in R, Python, Java, C, and more from university and self-study.
           I want to use my array of technical skills and biology background to improve
           people's lives in a fast-paced environment where I can see my efforts take shape.

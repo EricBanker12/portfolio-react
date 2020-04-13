@@ -122,7 +122,7 @@ class Skills extends React.Component {
                 <TableCell>
                   <TableSortLabel
                     name='technology'
-                    style={{fontSize: '1.125rem'}}
+                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'technology'}
                     direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
@@ -132,7 +132,7 @@ class Skills extends React.Component {
                 <TableCell>
                   <TableSortLabel
                     name='category'
-                    style={{fontSize: '1.125rem'}}
+                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'category'}
                     direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
@@ -142,7 +142,7 @@ class Skills extends React.Component {
                 <TableCell>
                   <TableSortLabel
                     name='field'
-                    style={{fontSize: '1.125rem'}}
+                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
                     onClick={this.labelClickHandler}
                     active={this.state.activeLabel === 'field'}
                     direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>

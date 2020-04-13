@@ -3,8 +3,8 @@ module.exports = {
     title: 'Eric Banker\'s Portfolio',
     author: 'Eric Banker',
     description:
-      'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
-    siteUrl: 'https://ericbanker.com',
+      'I am Eric Banker, a Full-Stack Web Developer, and this is my portfolio.',
+    siteUrl: 'https://www.ericbanker.com',
   },
   pathPrefix: '/',
   plugins: [

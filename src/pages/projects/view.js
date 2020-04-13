@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { FaArrowLeft } from 'react-icons/fa'
 
 import Layout from './../../components/Layout'
-import portfolioData from './../../data/portfolio'
+import projectData from './../../data/projects'
 
 export class view extends Component {
   render() {
@@ -16,8 +16,10 @@ export class view extends Component {
     )
 
     const params = new URLSearchParams(this.props.location.search)
-    const passedData = this.props.location.state || portfolioData[params.get('id')]
+    const passedData = this.props.location.state || projectData[params.get('id')]
     const { title, image, video, paragraphs, bullets, website } = passedData
+    
+    if (!passedData) return <Layout>Error</Layout>
 
     return (
       <Layout>
@@ -26,7 +28,7 @@ export class view extends Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${title} | ${siteTitle}`}
         />
-        <Link to="/portfolio"><FaArrowLeft/> Back&nbsp;</Link>
+        <Link to="/projects"><FaArrowLeft/> Back&nbsp;</Link>
         <h2><a href={website}>{title}</a></h2>
         {!video && <a href={website}><img src={image} alt={title} /></a>}
         {video && (

@@ -6,9 +6,9 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../../components/Layout'
-import portfolioData from './../../data/portfolio'
+import projectData from './../../data/projects'
 
-class portfolioIndex extends React.Component {
+class projectIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -21,10 +21,10 @@ class portfolioIndex extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`Portfolio | ${siteTitle}`}
+          title={`Projects | ${siteTitle}`}
         />
         <header style={{position: 'relative'}}>
-          <h2>Portfolio</h2>
+          <h2>Projects</h2>
           <p style={{position: 'absolute', top:0, right:0}}>
             <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
           </p>
@@ -34,27 +34,25 @@ class portfolioIndex extends React.Component {
         <div style={{textAlign: 'center'}}>
           <Grid fluid>
             <Row>
-              {portfolioData.map((p, i) => (
+              {projectData.map((p, i) => (
                 <Col xs={12} sm={12} md={6} lg={6} key={p.title}>
-                  <Link to={`/portfolio/view?id=${i}`} state={p} key={p.title}>
+                  <Link to={`/projects/view?id=${i}`} state={p} key={p.title}>
                     <div
                       style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                      }}
-                    >
+                      }}>
                       <div
                         style={{
                           width: 320,
                           height: 180,
-                          margin: 10,
+                          marginTop: 10,
                           background: `url(${p.image})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center center',
-                        }}
-                      />
-                      <p>{p.title}</p>
+                        }}/>
+                      <h4>{p.title}</h4>
                       <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>
@@ -68,7 +66,7 @@ class portfolioIndex extends React.Component {
   }
 }
 
-export default portfolioIndex
+export default projectIndex
 
 export const query = graphql`
   query {

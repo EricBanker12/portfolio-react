@@ -22,13 +22,13 @@ export class Navbar extends Component {
             maxWidth: 500,
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-evenly',
+            justifyContent: 'space-around',
             flexWrap: 'wrap',
           }}
         >
           <Link to={'/'}><FaHome /> Home&nbsp;</Link>
           <Link to={'/skills'}><FaCog /> Skills&nbsp;</Link>
-          <Link to={'/portfolio'}><FaShapes /> Portfolio&nbsp;</Link>
+          <Link to={'/projects'}><FaShapes /> Projects&nbsp;</Link>
           <Link to={'/education'}><FaGraduationCap /> Education&nbsp;</Link>
           {/* <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link> */}
         </div>

@@ -22,7 +22,7 @@ export class Navbar extends Component {
             maxWidth: 500,
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-evenly',
+            justifyContent: 'space-around',
             flexWrap: 'wrap',
           }}
         >

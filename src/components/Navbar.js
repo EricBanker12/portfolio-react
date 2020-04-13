@@ -28,7 +28,7 @@ export class Navbar extends Component {
         >
           <Link to={'/'}><FaHome /> Home&nbsp;</Link>
           <Link to={'/skills'}><FaCog /> Skills&nbsp;</Link>
-          <Link to={'/portfolio'}><FaShapes /> Portfolio&nbsp;</Link>
+          <Link to={'/projects'}><FaShapes /> Projects&nbsp;</Link>
           <Link to={'/education'}><FaGraduationCap /> Education&nbsp;</Link>
           {/* <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link> */}
         </div>

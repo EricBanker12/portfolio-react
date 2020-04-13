@@ -104,7 +104,7 @@ class Skills extends React.Component {
         <header style={{position: 'relative'}}>
           <h2>Skills</h2>
           <p style={{position: 'absolute', top:0, right:0}}>
-            <Link to={'/portfolio'}>&nbsp;Portfolio <FaArrowRight/></Link>
+            <Link to={'/projects'}>&nbsp;Projects <FaArrowRight/></Link>
           </p>
         </header>
 

@@ -90,14 +90,14 @@ const data = [
       (0:00-1:50) and showcase the web application (1:50-5:08) following my team's 2 months of work.`,
     ],
     bullets: [
-      `Built to the specifications of our stakeholder, Story Squad, LLC., on a remote, crossfunctional
+      `Built to the specifications of our not-for-profit stakeholder, Story Squad, LLC., on a remote, crossfunctional
       team of 1 UX designer, 5 full-stack developers, and later, 3 data scientists, over a 2 month period.`,
       `Designed and implemented the back-end API and front-end interface for admin user management
       and child user reception of the weekly competition prompts.`,
       `Coded the API and interface for COPPA-compliant, child user submissions in coordination with
       data scientists for scanned handwriting to text conversion.`,
-      `Wrote large contributions to wiki documentation for components, pages, middleware, utils, and
-      database schema and migrations.`,
+      `Documented components, pages, middleware, utils, and database schema and migration details on our GitHub wiki
+      with markdown text styling.`,
       'Built using Axios, BCrypt, Express, Jest, Markdown, Material-UI, Node, React, SuperTest, TypeORM, and Typescript.',
       {
         link: 'https://github.com/Lambda-School-Labs/story-squad-be',
@@ -117,7 +117,8 @@ const data = [
     utilizing WebSocket and depth-first traversal maze generation.`],
     bullets: [
       `Performed as a full-stack developer on a remote team of 5 full-stack developers.`,
-      'Programmed and optimized back-end world and maze generation working around database limitations.',
+      `Programmed back-end maze creation algorithm and optimized database usage to multiply generation
+      speed to over 1000 times faster.`,
       `Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and
       mobile devices, and programmed keyboard input for the Angular front-end.`,
       'Built using Angular, Django, Material-UI, Python, and Typescript.',

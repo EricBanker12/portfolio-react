@@ -17,9 +17,10 @@ export class view extends Component {
 
     const params = new URLSearchParams(this.props.location.search)
     const passedData = this.props.location.state || projectData[params.get('id')]
-    const { title, image, video, paragraphs, bullets, website } = passedData
     
     if (!passedData) return <Layout>Error</Layout>
+    
+    const { title, image, video, paragraphs, bullets, website } = passedData
 
     return (
       <Layout>

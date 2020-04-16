@@ -1,6 +1,6 @@
 const data = [
   {
-    technology: 'Javascript',
+    technology: 'JavaScript',
     field: 'Web Development',
     category: 'Language',
   },
@@ -15,12 +15,12 @@ const data = [
     category: 'Language',
   },
   {
-    technology: 'Node',
+    technology: 'Node.js',
     field: 'Web Development',
     category: 'Other',
   },
   {
-    technology: 'React',
+    technology: 'React.js',
     field: 'Web Development (Front-End)',
     category: 'Library',
   },
@@ -30,7 +30,7 @@ const data = [
     category: 'Framework',
   },
   {
-    technology: 'SASS',
+    technology: 'SASS/SCSS',
     field: 'Web Development (Front-End)',
     category: 'Language',
   },
@@ -45,17 +45,17 @@ const data = [
     category: 'Language',
   },
   {
-    technology: 'Git Bash',
+    technology: 'Git BASH',
     field: 'Computer Science',
     category: 'CLI',
   },
   {
-    technology: 'NPM',
+    technology: 'npm',
     field: 'Web Development',
     category: 'Other',
   },
   {
-    technology: 'Electron',
+    technology: 'Electron.js',
     field: 'Web Development (Front-End)',
     category: 'Framework',
   },
@@ -90,7 +90,7 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'Knex',
+    technology: 'Knex.js',
     field: 'Web Development (Back-End)',
     category: 'Framework',
   },
@@ -105,7 +105,12 @@ const data = [
     category: 'Other',
   },
   {
-    technology: 'Redux',
+    technology: 'Redux.js',
+    field: 'Web Development',
+    category: 'Library',
+  },
+  {
+    technology: 'Redux Thunk',
     field: 'Web Development',
     category: 'Library',
   },
@@ -125,12 +130,12 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'Angular',
+    technology: 'AngularJS',
     field: 'Web Development (Front-End)',
     category: 'Framework',
   },
   {
-    technology: 'Express',
+    technology: 'Express.js',
     field: 'Web Development (Back-End)',
     category: 'Framework',
   },
@@ -155,12 +160,12 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'JSON Web Tokens (JWT)',
+    technology: 'JSON Web Token (JWT)',
     field: 'Web Development',
     category: 'Other',
   },
   {
-    technology: 'Sessions',
+    technology: 'Session Management',
     field: 'Web Development',
     category: 'Other',
   },
@@ -180,7 +185,7 @@ const data = [
     category: 'Other',
   },
   {
-    technology: 'AutoHotkey',
+    technology: 'AutoHotKey',
     field: 'Computer Science',
     category: 'Language',
   },
@@ -195,12 +200,12 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'Styled Components',
+    technology: 'styled-components',
     field: 'Web Development (Front-End)',
     category: 'Library',
   },
   {
-    technology: 'BCrypt',
+    technology: 'bcrypt',
     field: 'Web Development (Back-End)',
     category: 'Library',
   },
@@ -208,6 +213,11 @@ const data = [
     technology: 'Markdown',
     field: 'Computer Science',
     category: 'Language',
+  },
+  {
+    technology: 'PIP',
+    field: 'Computer Science',
+    category: 'Other',
   },
 ]
 

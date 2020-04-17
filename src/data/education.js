@@ -1,34 +1,43 @@
 const data = [
   {
     title: 'Lambda School',
+    time: '2019 – 2020',
     paragraphs: [
-      'Lambda School is a 9+ month Computer Science & Software Engineering Academy that provides an immersive hands-on curriculum with a focus on computer science, and fullstack web development. Students in this program:',
+      `Lambda School is a 9+ month Computer Science & Software Engineering Academy that
+      provides an immersive hands-on curriculum with a focus on computer science, and
+      fullstack web development.`,
     ],
     bullets: [
-      'Approach all coding challenges using pair programming.',
-      'Utilize agile software development and Git workflow on all projects.',
-      'Gain hands-on experience with client and server testing.',
-      'Design original user experiences across a range of web and mobile platforms, from ideation, to wireframing, to final product.',
-      'Complete all curriculum course work including: React, React Native, Redux, Node, Express, MongoDB, Jest, Python, Django, etc.',
-      'Write production-ready code using ReactJS, Redux, and CSS on the frontend and NodeJS and Express on the backend to build single page applications.',
+      `Completed all projects on-time meeting all minimum viable product (MVP) requirements.`,
+      `Often implemented stretch goals or explored technologies beyond the base curriculum.`,
+      {
+        text: 'Full-Stack Web Development Curriculum',
+        link: 'https://lambdaschool.com/courses/full-stack-web-development'
+      },
     ],
   },
   {
     title: 'Southern Illinois University Edwardsville',
+    time: '2014 – 2018',
     paragraphs: [
       'B.S. Biological Sciences 2018',
-      'Major Concentration: Genetics and Cellular Biology',
-      'Minor: Chemistry',
+      'Major Concentration: Genetics and Cellular Biology | Minor: Chemistry',
     ],
     bullets: [
       'Maintained a 4.0 GPA in all subjects earning the Summa Cum Laude distinction.',
-      'Electives included Bioinformatics, Calculus, Quantitative Methods, and Statistics.',
+      `Enrolled in data science related courses: Bioinformatics, Calculus, Quantitative
+      Methods, and Statistics.`,
+      {
+        text: 'Genetics and Cellular Biology Curriculum',
+        link: 'https://www.siue.edu/academics/undergraduate/degrees-and-programs/biological-sciences/specialization-genetics-cellular-biology.shtml'
+      },
     ],
   },
   {
     title: 'Coursera',
+    time: '2014 – 2019',
     paragraphs: [
-      'Audited the following specializations 2014-2019:',
+      'Audited the following specializations for further technical depth and breadth:',
     ],
     bullets: [
       {

@@ -32,7 +32,10 @@ class Education extends React.Component {
 
         {educationData.map((data, index) => (
           <div key={index}>
-            <h4>{data.title}</h4>
+            <div style={{display: 'flex'}}>
+              <h4>{data.title}</h4>
+              <span style={{marginTop: '1.375rem'}}>&nbsp;| {data.time}</span>
+            </div>
             {data.paragraphs.map((paragraphs, i) => (
               <p key={i}>{paragraphs}</p>
             ))}

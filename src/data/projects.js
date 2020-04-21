@@ -26,7 +26,7 @@ const data = [
   {
     title: 'My Top Nine',
     image: Image2,
-    paragraphs: [`An online favorites list, My Top Nine allows users to create
+    paragraphs: [`An online favorites list, My Top Nine, allows users to create
     accounts and form categorized lists of up to 9 items.`],
     bullets: [
       `Performed as a front-end developer on a remote team of 5 consisting of 1 UI developer,
@@ -60,9 +60,9 @@ const data = [
     website: 'https://giga-pet.netlify.com/',
   },
   {
-    title: 'Empowerd Conversations',
+    title: 'Empowered Conversations',
     image: Image4,
-    paragraphs: [`Empowerd Conversations is a web app that acts as an ice-breaker for
+    paragraphs: [`Empowered Conversations is a web app that acts as an ice-breaker for
     sensitive discussions by preparing the recipient with conversational advice prior
     to starting the interpersonal communication.`],
     bullets: [
@@ -94,7 +94,7 @@ const data = [
       team of 1 UX designer, 5 full-stack developers, and later, 3 data scientists, over a 2 month period.`,
       `Designed and implemented the back-end API and front-end interface for admin user management
       and child user reception of the weekly competition prompts.`,
-      `Coded the API and interface for COPPA-compliant, child user submissions in coordination with
+      `Coded the API and interface for COPPA-compliant, child user submissions, and collaborated with
       data scientists for scanned handwriting to text conversion.`,
       `Documented components, pages, middleware, utils, and database schema and migration details on our GitHub wiki
       with markdown text styling.`,

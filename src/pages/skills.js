@@ -116,60 +116,62 @@ class Skills extends React.Component {
             style={{width: '100%'}}
             value={this.state.filter}
             onChange={(e) => {this.setState({filter: e.target.value})}} />
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  <TableSortLabel
-                    name='technology'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'technology'}
-                    direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
-                    Technology
-                  </TableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='category'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'category'}
-                    direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
-                    Category
-                  </TableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='field'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'field'}
-                    direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>
-                    Field
-                  </TableSortLabel>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {skillsData
-                .filter(this.filterTableHandler)
-                .sort(this.sortTableHandler)
-                .map((skill) => (
-                <TableRow key={skill.technology}>
+          <div style={{maxWidth: '100%', overflow: 'auto'}}>
+            <Table>
+              <TableHead>
+                <TableRow>
                   <TableCell>
-                    {skill.technology}
+                    <TableSortLabel
+                      name='technology'
+                      style={{fontSize: '0.875rem', fontWeight: 'bold'}}
+                      onClick={this.labelClickHandler}
+                      active={this.state.activeLabel === 'technology'}
+                      direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
+                      Technology
+                    </TableSortLabel>
                   </TableCell>
                   <TableCell>
-                    {skill.category}
+                    <TableSortLabel
+                      name='category'
+                      style={{fontSize: '0.875rem', fontWeight: 'bold'}}
+                      onClick={this.labelClickHandler}
+                      active={this.state.activeLabel === 'category'}
+                      direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
+                      Category
+                    </TableSortLabel>
                   </TableCell>
                   <TableCell>
-                    {skill.field}
+                    <TableSortLabel
+                      name='field'
+                      style={{fontSize: '0.875rem', fontWeight: 'bold'}}
+                      onClick={this.labelClickHandler}
+                      active={this.state.activeLabel === 'field'}
+                      direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>
+                      Field
+                    </TableSortLabel>
                   </TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHead>
+              <TableBody>
+                {skillsData
+                  .filter(this.filterTableHandler)
+                  .sort(this.sortTableHandler)
+                  .map((skill) => (
+                  <TableRow key={skill.technology}>
+                    <TableCell>
+                      {skill.technology}
+                    </TableCell>
+                    <TableCell>
+                      {skill.category}
+                    </TableCell>
+                    <TableCell>
+                      {skill.field}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </ThemeProvider>
 
       </Layout>

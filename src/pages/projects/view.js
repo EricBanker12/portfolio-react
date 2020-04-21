@@ -26,7 +26,12 @@ export class view extends Component {
       <Layout>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
+          meta={[
+            {name: 'description', content: siteDescription},
+            {name: 'og:title', content: title},
+            {name: 'og:description', content: paragraphs[0]},
+            {name: 'og:image', content: image},
+          ]}
           title={`${title} | ${siteTitle}`}
         />
         <Link to="/projects"><FaArrowLeft/> Back&nbsp;</Link>

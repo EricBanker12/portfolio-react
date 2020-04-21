@@ -30,7 +30,7 @@ export class view extends Component {
             {name: 'description', content: siteDescription},
             {name: 'og:title', content: title},
             {name: 'og:description', content: paragraphs[0]},
-            {name: 'og:image', content: image},
+            {name: 'og:image', content: `${window.location.origin}${image}`},
           ]}
           title={`${title} | ${siteTitle}`}
         />

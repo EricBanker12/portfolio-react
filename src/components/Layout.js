@@ -28,7 +28,9 @@ class Layout extends React.Component {
       <div style={finalStyle}>
         <Header />
         <Navbar />
-        {children}
+        <section aria-live="assertive">
+          {children}
+        </section>
         <Footer />
       </div>
     )

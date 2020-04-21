@@ -49,8 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-minimal-portfolio-blog`,
-        short_name: `gmpb`,
+        name: `Eric Banker's Portfolio`,
+        short_name: `Eric B. Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

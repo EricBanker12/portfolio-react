@@ -99,7 +99,7 @@ const data = [
       `Coded the API and interface for COPPA-compliant child user submissions, and collaborated with
       Data Scientists for scanned handwriting to text conversion.`,
       `Documented components, pages, middleware, utils, and database schema and migration details on our GitHub wiki
-      with markdown text styling.`,
+      with Markdown text styling.`,
       'Built using Axios, bcrypt, Express.js, Jest, Markdown, Material-UI, Node.js, React.js, SuperTest, TypeORM, and TypeScript.',
       {
         link: 'https://github.com/Lambda-School-Labs/story-squad-be',

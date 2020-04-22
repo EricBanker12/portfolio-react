@@ -4,12 +4,12 @@ const data = [
     time: '2019 – 2020',
     paragraphs: [
       `Lambda School is a 9+ month Computer Science & Software Engineering Academy that
-      provides an immersive hands-on curriculum with a focus on computer science, and
+      provides an immersive hands-on curriculum with a focus on computer science and
       fullstack web development.`,
     ],
     bullets: [
-      `Completed all projects on-time meeting all minimum viable product (MVP) requirements.`,
-      `Often implemented stretch goals or explored technologies beyond the base curriculum.`,
+      `Completed all assignments and projects on-time while meeting all minimum viable product requirements.`,
+      `Frequently completed stretch goals on class assignments and explored new technologies beyond the base curriculum.`,
       {
         text: 'Full-Stack Web Development Curriculum',
         link: 'https://lambdaschool.com/courses/full-stack-web-development'

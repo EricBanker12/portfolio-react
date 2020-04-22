@@ -29,8 +29,8 @@ const data = [
     paragraphs: [`An online favorites list, My Top Nine, allows users to create
     accounts and form categorized lists of up to 9 items.`],
     bullets: [
-      `Performed as a front-end developer on a remote team of 5 consisting of 1 UI developer,
-      3 front-end developers, and 1 back-end developer.`,
+      `Performed as a Front-End Developer on a remote team of 5 consisting of 1 UI Developer,
+      3 Front-End Developers, and 1 Back-End Developer.`,
       'Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling.',
       'Programmed functional, state managed forms for creation and editing of categorized list entries.',
       'Built using Axios, Bootstrap, JavaScript, and React.js.',
@@ -47,8 +47,8 @@ const data = [
     paragraphs: [`Gigapet is a web app for parents to track the eating habits of their children
     while motivating the kids by giving their digital pet energy with every meal.`],
     bullets: [
-      `Performed as a front-end developer on a remote team of 6 consisting of 1 UI developer,
-      3 front-end developers, 1 back-end developer, and 1 UX Designer.`,
+      `Performed as a Front-End Developer on a remote team of 6 consisting of 1 UI Developer,
+      3 Front-End Developers, 1 Back-End Developer, and 1 UX Designer.`,
       'Programmed modal popups, meal selection, meal history, and pet CSS animation.',
       'Incorporated Redux for state management and worked with both functional and classical React components',
       'Built using Axios, JavaScript, React.js, Redux.js, and styled-components.',
@@ -66,11 +66,11 @@ const data = [
     sensitive discussions by preparing the recipient with conversational advice prior
     to starting the interpersonal communication.`],
     bullets: [
-      `Performed as the sole back-end developer on a remote team of 4 consisting of 1 UI developer,
-      2 front-end developers, 1 back-end developer.`,
+      `Solely developed the app's back-end in coordination as part of a remote team of 4 consisting of
+      1 UI developer, 2 Front-End Developers, and 1 Back-End Developer over a 4 day period.`,
       'Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.',
-      `Wrote a complete REST-ful API with detailed documentation and testing, and communicted with a
-      PostgreSQL database and a 3rd party Twilio API for text messaging.`,
+      `Coded a REST-ful API with detailed documentation and testing, and communicted with a
+      PostgreSQL database and a 3rd-party Twilio API for text messaging.`,
       `Built using bcrypt, Express.js, JavaScript, Jest, JSON Web Token (JWT), Knex.js, Markdown,
       Node,js, PostgreSQL, SuperTest, and Twilio.`,
       {
@@ -91,12 +91,13 @@ const data = [
       (0:00-1:50) and showcase the web application (1:50-5:08) following my team's 2 months of work.`,
     ],
     bullets: [
-      `Built to the specifications of our not-for-profit stakeholder, Story Squad, LLC., on a remote, crossfunctional
-      team of 1 UX designer, 5 full-stack developers, and later, 3 data scientists, over a 2 month period.`,
+      `Collaborated on a remote, crossfunctional team of 1 UX Designer, 5 Full-Stack Developers, and 3 Data Scientists,
+      over a 2 month period utilizing Agile methodoligy; built an application to the specifications of a
+      not-for-profit stakeholder.`,
       `Designed and implemented the back-end API and front-end interface for admin user management
-      and child user reception of the weekly competition prompts.`,
-      `Coded the API and interface for COPPA-compliant, child user submissions, and collaborated with
-      data scientists for scanned handwriting to text conversion.`,
+      and child users' weekly competition PDF display.`,
+      `Coded the API and interface for COPPA-compliant child user submissions, and collaborated with
+      Data Scientists for scanned handwriting to text conversion.`,
       `Documented components, pages, middleware, utils, and database schema and migration details on our GitHub wiki
       with markdown text styling.`,
       'Built using Axios, bcrypt, Express.js, Jest, Markdown, Material-UI, Node.js, React.js, SuperTest, TypeORM, and TypeScript.',
@@ -117,12 +118,12 @@ const data = [
     paragraphs: [`Tower Maze is a real-time, multiplayer maze exploration game
     utilizing WebSocket and depth-first traversal maze generation.`],
     bullets: [
-      `Performed as a full-stack developer on a remote team of 5 full-stack developers.`,
+      `Performed as a Full-Stack Developer on a remote team of 5 Full-Stack Developers over a 4 day period.`,
       `Programmed back-end maze creation algorithm and optimized database usage to multiply generation
       speed to over 1000 times faster.`,
       `Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and
       mobile devices, and programmed keyboard input for the AngularJS front-end.`,
-      'Built using AngularJS, Django, Material-UI, Python, and TypeScript.',
+      'Built using AngularJS, Django, Material-UI, Pipenv, PostgreSQL, Python, and TypeScript.',
       {
         link: 'https://github.com/tower-maze',
         text: 'GitHub Repositories',

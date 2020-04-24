@@ -66,7 +66,7 @@ const data = [
     sensitive discussions by preparing the recipient with conversational advice prior
     to starting the interpersonal communication.`],
     bullets: [
-      `Solely developed the app’s back-end over a 4 day period, coordinating on a remote team of 4 including
+      `Solely developed the app's back-end over a 4 day period, coordinating on a remote team of 4 including
       1 UI Developer and 2 Front-End Developers.`,
       'Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.',
       `Coded a REST-ful API with detailed documentation and testing, and communicted with a

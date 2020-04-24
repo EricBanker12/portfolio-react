@@ -66,8 +66,8 @@ const data = [
     sensitive discussions by preparing the recipient with conversational advice prior
     to starting the interpersonal communication.`],
     bullets: [
-      `Solely developed the app's back-end in coordination as part of a remote team of 4 consisting of
-      1 UI developer, 2 Front-End Developers, and 1 Back-End Developer over a 4 day period.`,
+      `Solely developed the app's back-end over a 4 day period, coordinating on a remote team of 4 including
+      1 UI Developer and 2 Front-End Developers.`,
       'Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.',
       `Coded a REST-ful API with detailed documentation and testing, and communicted with a
       PostgreSQL database and a 3rd-party Twilio API for text messaging.`,
@@ -92,14 +92,13 @@ const data = [
     ],
     bullets: [
       `Collaborated on a remote, crossfunctional team of 1 UX Designer, 5 Full-Stack Developers, and 3 Data Scientists,
-      over a 2 month period utilizing Agile methodoligy; built an application to the specifications of a
-      not-for-profit stakeholder.`,
+      over a 2 month period; utilized Agile methodology to build application to the specifications of a not-for-profit stakeholder.`,
       `Designed and implemented the back-end API and front-end interface for admin user management
       and child users' weekly competition PDF display.`,
       `Coded the API and interface for COPPA-compliant child user submissions, and collaborated with
       Data Scientists for scanned handwriting to text conversion.`,
       `Documented components, pages, middleware, utils, and database schema and migration details on our GitHub wiki
-      with markdown text styling.`,
+      with Markdown text styling.`,
       'Built using Axios, bcrypt, Express.js, Jest, Markdown, Material-UI, Node.js, React.js, SuperTest, TypeORM, and TypeScript.',
       {
         link: 'https://github.com/Lambda-School-Labs/story-squad-be',

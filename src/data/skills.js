@@ -219,6 +219,21 @@ const data = [
     field: 'Computer Science',
     category: 'Other',
   },
+  {
+    technology: 'Spring',
+    field: 'Computer Science',
+    category: 'Framework',
+  },
+  {
+    technology: 'Spring Boot',
+    field: 'Web Development (Back-End)',
+    category: 'Other',
+  },
+  {
+    technology: 'Maven',
+    field: 'Computer Science',
+    category: 'Other',
+  },
 ]
 
 export default data

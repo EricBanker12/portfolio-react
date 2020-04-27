@@ -30,7 +30,7 @@ class SiteIndex extends React.Component {
         </header>
 
         <p>
-          I am Eric Banker, a Full-Stack Developer, with interests in biology
+          I am Eric Banker, a Full-Stack Web Developer, with interests in biology
           and healthcare. I boast a strong background in HTML, CSS, JavaScript,
           React.js, Node.js, Express.js, and Jest, in addition to extra background in R,
           Python, Java, and C/C++ from university and self-study.

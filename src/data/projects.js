@@ -121,8 +121,8 @@ const data = [
       `Programmed back-end maze creation algorithm and optimized database usage to multiply generation
       speed to over 1000 times faster.`,
       `Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and
-      mobile devices, and programmed keyboard input for the AngularJS front-end.`,
-      'Built using AngularJS, Django, Material-UI, Pipenv, PostgreSQL, Python, and TypeScript.',
+      mobile devices, and programmed keyboard input for the Angular front-end.`,
+      'Built using Angular, Django, Material-UI, Pipenv, PostgreSQL, Python, and TypeScript.',
       {
         link: 'https://github.com/tower-maze',
         text: 'GitHub Repositories',

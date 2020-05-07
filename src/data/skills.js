@@ -130,7 +130,7 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'AngularJS',
+    technology: 'Angular',
     field: 'Web Development (Front-End)',
     category: 'Framework',
   },

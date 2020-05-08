@@ -130,7 +130,7 @@ const data = [
     category: 'Library',
   },
   {
-    technology: 'AngularJS',
+    technology: 'Angular',
     field: 'Web Development (Front-End)',
     category: 'Framework',
   },
@@ -233,6 +233,26 @@ const data = [
     technology: 'Maven',
     field: 'Computer Science',
     category: 'Other',
+  },
+  {
+    technology: 'Create React App',
+    field: 'Web Development (Front-End)',
+    category: 'Other',
+  },
+  {
+    technology: 'GatsbyJS',
+    field: 'Web Development (Front-End)',
+    category: 'Framework',
+  },
+  {
+    technology: 'Heroku',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'JUnit',
+    field: 'Computer Science',
+    category: 'Framework',
   },
 ]
 

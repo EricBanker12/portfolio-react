@@ -254,6 +254,51 @@ const data = [
     field: 'Computer Science',
     category: 'Framework',
   },
+  {
+    technology: 'AWS',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'Apache Tomcat',
+    field: 'Web Development (Back-End)',
+    category: 'Other',
+  },
+  {
+    technology: 'Netty',
+    field: 'Web Development (Back-End)',
+    category: 'Framework',
+  },
+  {
+    technology: 'Kubernetes',
+    field: 'Computer Science',
+    category: 'Other',
+  },
+  {
+    technology: 'Docker',
+    field: 'Computer Science',
+    category: 'Other',
+  },
+  {
+    technology: 'Yarn',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'Webpack',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'Babel',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'MongoDB',
+    field: 'Web Development (Back-End)',
+    category: 'Other',
+  },
 ]
 
 export default data

@@ -1,15 +1,7 @@
-import Image1 from './../assets/images/image1.jpg'
-import Image2 from './../assets/images/image2.jpg'
-import Image3 from './../assets/images/image3.jpg'
-import Image4 from './../assets/images/Image4.jpg'
-import Image5 from './../assets/images/Image5.jpg'
-import Video5 from './../assets/videos/StorySquad_final_presentation.mp4'
-import Image6 from './../assets/images/Image6.jpg'
-
 const data = [
   {
     title: 'Wunderlist 2.0',
-    image: Image1,
+    image: 'Image1.jpg',
     paragraphs: [`An online to-do list, Wunderlist 2.0 is a web app for
     creating and updating your tasks.`],
     bullets: [
@@ -25,7 +17,7 @@ const data = [
   },
   {
     title: 'My Top Nine',
-    image: Image2,
+    image: 'Image2.jpg',
     paragraphs: [`An online favorites list, My Top Nine, allows users to create
     accounts and form categorized lists of up to 9 items.`],
     bullets: [
@@ -43,7 +35,7 @@ const data = [
   },
   {
     title: 'Gigapet',
-    image: Image3,
+    image: 'Image3.jpg',
     paragraphs: [`Gigapet is a web app for parents to track the eating habits of their children
     while motivating the kids by giving their digital pet energy with every meal.`],
     bullets: [
@@ -61,7 +53,7 @@ const data = [
   },
   {
     title: 'Empowered Conversations',
-    image: Image4,
+    image: 'Image4.jpg',
     paragraphs: [`Empowered Conversations is a web app that acts as an ice-breaker for
     sensitive discussions by preparing the recipient with conversational advice prior
     to starting the interpersonal communication.`],
@@ -82,8 +74,8 @@ const data = [
   },
   {
     title: 'Story Squad',
-    image: Image5,
-    video: Video5,
+    image: 'Image5.jpg',
+    video: 'StorySquad_final_presentation.mp4',
     paragraphs: [
       `Story Squad is a progressive web app for encouraging young children to sharpen
       their language, drawing, teamwork, and critical thinking skills through weekly competition.`,
@@ -113,7 +105,7 @@ const data = [
   },
   {
     title: 'Tower Maze',
-    image: Image6,
+    image: 'Image6.jpg',
     paragraphs: [`Tower Maze is a real-time, multiplayer maze exploration game
     utilizing WebSocket and depth-first traversal maze generation.`],
     bullets: [

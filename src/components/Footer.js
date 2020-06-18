@@ -3,10 +3,10 @@ import { FaPhoneSquare, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 import contactData from './../data/contact'
 
-export class Footer extends Component {
+class Footer extends Component {
   render() {
     return (
-      <div>
+      <footer>
         <h4>Eric Banker | Full-Stack Web Developer</h4>
         <p>I am always open to email, text message, and voicemail.</p>
         <div style={{display: 'flex', flexDirection: 'column'}}>
@@ -15,7 +15,7 @@ export class Footer extends Component {
           <a href={contactData.github}><FaGithub/> GitHub&nbsp;</a>
           <a href={contactData.linkedin}><FaLinkedin/> LinkedIn&nbsp;</a>
         </div>
-      </div>
+      </footer>
     )
   }
 }

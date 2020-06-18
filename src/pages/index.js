@@ -1,33 +1,16 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import get from 'lodash/get'
-import Hemlet from 'react-helmet'
-import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
-import DisplayImage from './../assets/images/main_image.jpg'
+import Header from '../components/Header'
+import SEO from '../components/SEO'
 
 class SiteIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
-
     return (
       <Layout>
-        <Hemlet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
-        </Hemlet>
 
-        <header style={{position: 'relative'}}>
-          <h2>Home</h2>
-          <p style={{position: 'absolute', top:0, right:0}}>
-            <Link to={'/skills'}>&nbsp;Skills <FaArrowRight/></Link>
-          </p>
-        </header>
+        <SEO title='Home'/>
+        <Header title='Home' next='Skills'/>
 
         <p>
           I am Eric Banker, a Full-Stack Web Developer, with interests in biology
@@ -52,7 +35,7 @@ class SiteIndex extends React.Component {
           environment where I can see my efforts take shape.
         </p>
 
-        <img src={DisplayImage} alt={siteTitle} />
+        {/* <img src={DisplayImage} alt={siteTitle} /> */}
 
       </Layout>
     )
@@ -60,14 +43,3 @@ class SiteIndex extends React.Component {
 }
 
 export default SiteIndex
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`

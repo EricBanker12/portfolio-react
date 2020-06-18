@@ -1,34 +1,20 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import get from 'lodash/get'
-import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import educationData from './../data/education'
+import SEO from '../components/SEO'
+import Header from '../components/Header'
 
 class Education extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteDescription = this.props.data.site.siteMetadata.description
 
     return (
       <Layout>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`Education | ${siteTitle}`}
-        />
 
-        <header style={{position: 'relative'}}>
-          <h2>Education</h2>
-          <p style={{position: 'absolute', top:0, right:0}}>
-            {/* <Link to={'/blog'}>&nbsp;Blog <FaArrowRight/></Link> */}
-          </p>
-        </header>
+        <SEO title='Education'/>
+        <Header title='Education'/>
 
         {educationData.map((data, index) => (
           <div key={index}>
@@ -54,14 +40,3 @@ class Education extends React.Component {
 }
 
 export default Education
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`

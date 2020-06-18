@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { rhythm } from '../utils/typography'
-import Header from '../components/Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
@@ -12,12 +10,10 @@ class Layout extends React.Component {
     const { children } = this.props
     const importedStyle = this.props.style
     const defaultStyle = {
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      maxWidth: rhythm(32),
-      padding: `${rhythm(1.5)}`,
+      maxWidth: '50rem',
+      padding: '2rem',
       backgroundColor: 'white',
-      minHeight: '100vh'
+      flex: 1,
     }
 
     const finalStyle = {
@@ -26,9 +22,9 @@ class Layout extends React.Component {
     }
     return (
       <div style={finalStyle}>
-        <Header />
+        {/* <Header /> */}
         <Navbar />
-        <section aria-live="assertive">
+        <section>
           {children}
         </section>
         <Footer />

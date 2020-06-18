@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FaHome, FaCog, FaShapes, FaGraduationCap } from 'react-icons/fa'
 import { IoMdText } from 'react-icons/io'
 import { Link } from 'gatsby'
 
-import { rhythm } from './../utils/typography'
-
-export class Navbar extends Component {
+class Navbar extends React.Component {
   render() {
     return (
-      <div
+      <header
         style={{
           width: '100%',
           display: 'flex',
@@ -16,9 +14,8 @@ export class Navbar extends Component {
           justifyContent: 'center',
         }}
       >
-        <div
+        <nav
           style={{
-            width: rhythm(24),
             maxWidth: 500,
             display: 'flex',
             flexDirection: 'row',
@@ -31,8 +28,8 @@ export class Navbar extends Component {
           <Link to={'/projects'}><FaShapes /> Projects&nbsp;</Link>
           <Link to={'/education'}><FaGraduationCap /> Education&nbsp;</Link>
           {/* <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link> */}
-        </div>
-      </div>
+        </nav>
+      </header>
     )
   }
 }

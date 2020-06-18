@@ -1,14 +1,17 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import { FaArrowRight } from 'react-icons/fa'
 
-const Header = () => {
+const Header = ({title, next}) => {
   return (
-    <div
-      style={{
-        textAlign: 'center',
-      }}
-    >
-      {/* <h2>Site Title</h2> */}
-    </div>
+    <header style={{position: 'relative'}}>
+      <h2>{title}</h2>
+      {next && (
+        <p style={{position: 'absolute', top:0, right:0}}>
+          <Link to={`/${next}`}>&nbsp;{next} <FaArrowRight/></Link>
+        </p>
+      )}
+    </header>
   )
 }
 

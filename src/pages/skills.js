@@ -1,7 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import get from 'lodash/get'
 import { FaArrowRight } from 'react-icons/fa'
 import {
   createMuiTheme,
@@ -17,6 +15,7 @@ import {
 
 import Layout from '../components/Layout'
 import skillsData from './../data/skills'
+import SEO from '../components/SEO'
 
 const theme = createMuiTheme({
   typography: {
@@ -87,27 +86,11 @@ class Skills extends React.Component {
   }
 
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
-
     return (
       <Layout>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`Skills | ${siteTitle}`}
-        />
 
-        <header style={{position: 'relative'}}>
-          <h2>Skills</h2>
-          <p style={{position: 'absolute', top:0, right:0}}>
-            <Link to={'/projects'}>&nbsp;Projects <FaArrowRight/></Link>
-          </p>
-        </header>
-
+        <SEO title='Skills'/>
+        <Header title='Skills' next='Projects'/>
 
         <ThemeProvider theme={theme}>
           <TextField
@@ -118,6 +101,7 @@ class Skills extends React.Component {
             onChange={(e) => {this.setState({filter: e.target.value})}} />
           <div style={{maxWidth: '100%', overflow: 'auto'}}>
             <Table>
+              
               <TableHead>
                 <TableRow>
                   <TableCell>
@@ -152,6 +136,7 @@ class Skills extends React.Component {
                   </TableCell>
                 </TableRow>
               </TableHead>
+              
               <TableBody>
                 {skillsData
                   .filter(this.filterTableHandler)
@@ -170,6 +155,7 @@ class Skills extends React.Component {
                   </TableRow>
                 ))}
               </TableBody>
+            
             </Table>
           </div>
         </ThemeProvider>
@@ -180,14 +166,3 @@ class Skills extends React.Component {
 }
 
 export default Skills
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`

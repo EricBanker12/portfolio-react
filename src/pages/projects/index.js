@@ -55,11 +55,11 @@ function projectIndex() {
                         flexDirection: 'column',
                         alignItems: 'center',
                       }}>
+                      <h4>{p.title}</h4>
                       <GatsbyImage
                         fixed={data.image.nodes.find(node => p.image == node.childImageSharp.fixed.originalName).childImageSharp.fixed}
                         alt={p.title}
                       />
-                      <h4>{p.title}</h4>
                       <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>

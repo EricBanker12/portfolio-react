@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { FaArrowRight } from 'react-icons/fa'
 
 const Header = ({title, next, path}) => {
-  path = path || `/${next.toLowerCase()}`
+  path = path || next && `/${next.toLowerCase()}`
 
   return (
     <header style={{position: 'relative'}}>

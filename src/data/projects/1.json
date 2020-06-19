@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "title": "Wunderlist 2.0",
+  "image": "image1.jpg",
+  "color": "#7fd1dc",
+  "background": "#ffffff",
+  "paragraphs": [
+    "An online to-do list, Wunderlist 2.0 is a web app for creating and updating your tasks."
+  ],
+  "bullets": [
+    "Constructed a fully responsive marketing site for desktop and mobile devices.",
+    "Designed pages in coordinatation with a UX Designer over a 4 day period.",
+    "Built using HTML and LESS."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/Wunderlist-bw/User-Interface/tree/eric-banker",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://brave-goldwasser-c0f535.netlify.com/"
+}

@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Eric Banker\'s Portfolio',
     author: 'Eric Banker',
-    description:
-      'I am Eric Banker, a Full-Stack Web Developer, and this is my portfolio.',
+    description: 'I am Eric Banker, a Full-Stack Web Developer, and this is my portfolio.',
     siteUrl: 'https://www.ericbanker.com',
   },
   plugins: [
@@ -29,6 +28,13 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/projects`,
       },
     },
   ],

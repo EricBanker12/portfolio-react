@@ -1,0 +1,23 @@
+{
+  "id": 2,
+  "title": "My Top Nine",
+  "image": "image2.jpg",
+  "color": "#232424",
+  "background": "#ffffff",
+  "paragraphs": [
+    "An online favorites list, My Top Nine, allows users to create accounts and form categorized lists of up to 9 items."
+  ],
+  "bullets": [
+    "Performed as a Front-End Developer on a remote team of 5 consisting of 1 UI Developer, 3 Front-End Developers, and 1 Back-End Developer.",
+    "Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling.",
+    "Programmed functional, state managed forms for creation and editing of categorized list entries.",
+    "Built using Axios, Bootstrap, JavaScript, and React.js."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/bw-my-top-nine/front-end",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://my-top-nine-app.netlify.com/"
+}

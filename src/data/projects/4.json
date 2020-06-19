@@ -1,0 +1,23 @@
+{
+  "id": 4,
+  "title": "Empowered Conversations",
+  "image": "image4.jpg",
+  "color": "#ffffff",
+  "background": "#9ed0f1",
+  "paragraphs": [
+    "Empowered Conversations is a web app that acts as an ice-breaker for sensitive discussions by preparing the recipient with conversational advice prior to starting the interpersonal communication."
+  ],
+  "bullets": [
+    "Solely developed the app's back-end over a 4 day period, coordinating on a remote team of 4 including 1 UI Developer and 2 Front-End Developers.",
+    "Implemented secure authentication through JSON web tokens and hashed passwords with many salt rounds.",
+    "Coded a REST-ful API with detailed documentation and testing, and communicted with a PostgreSQL database and a 3rd-party Twilio API for text messaging.",
+    "Built using bcrypt, Express.js, JavaScript, Jest, JSON Web Token (JWT), Knex.js, Markdown, Node,js, PostgreSQL, SuperTest, and Twilio."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/BW-EmpoweredConversations/Back-End",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://romantic-shannon-065344.netlify.com/Start"
+}

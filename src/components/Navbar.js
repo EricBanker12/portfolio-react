@@ -16,7 +16,8 @@ class Navbar extends React.Component {
       >
         <nav
           style={{
-            maxWidth: 500,
+            width: '100%',
+            maxWidth: '35rem',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-around',

@@ -7,14 +7,11 @@ import Header from '../components/Header'
 
 class Education extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = this.props.data.site.siteMetadata.description
-
     return (
       <Layout>
 
         <SEO title='Education'/>
-        <Header title='Education'/>
+        <Header title='Education' next='Home' path='/' />
 
         {educationData.map((data, index) => (
           <div key={index}>

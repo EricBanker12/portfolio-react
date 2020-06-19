@@ -1,80 +1,77 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Grid, Row, Col } from 'react-flexbox-grid'
-import { FaArrowRight } from 'react-icons/fa'
+import GatsbyImage from 'gatsby-image'
 
 import Layout from '../../components/Layout'
-import projectData from './../../data/projects'
+import SEO from '../../components/SEO'
+import Header from '../../components/Header'
 
-class projectIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+function projectIndex() {
+  
+  const data = useStaticQuery(graphql`
+    query {
+      json: allProjectsJson {
+        nodes {
+          id
+          title
+          image
+          paragraphs
+        }
+      }
+      image: allFile(filter: {relativePath: {regex: "/image\\d\\.jpg/"}}) {
+        nodes {
+          childImageSharp {
+            fixed(width: 320, quality: 90) {
+              originalName
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  `)
 
-    return (
-      <Layout>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`Projects | ${siteTitle}`}
-        />
-        <header style={{position: 'relative'}}>
-          <h2>Projects</h2>
-          <p style={{position: 'absolute', top:0, right:0}}>
-            <Link to={'/education'}>&nbsp;Education <FaArrowRight/></Link>
-          </p>
-        </header>
-        <p>Click on a project to view details.</p>
+  return (
+    <Layout>
+      
+      <SEO title='Projects'/>
+      <Header title='Projects' next='Education'/>
 
-        <div style={{textAlign: 'center'}}>
-          <Grid fluid>
-            <Row>
-              {projectData.map((p, i) => (
-                <Col xs={12} sm={12} md={6} lg={6} key={p.title}>
-                  <Link to={`/projects/view?id=${i}`} state={p} key={p.title}>
+      <p>Click on a project to view details.</p>
+
+      <div style={{textAlign: 'center'}}>
+        <Grid fluid>
+          <Row>
+            {data.json.nodes
+              .sort((a, b) => a.id - b.id)
+              .reverse()
+              .map(p => (
+                <Col xs={12} sm={12} md={6} lg={6} key={p.id}>
+                  <Link to={`/projects/${p.id}`}>
                     <div
                       style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                       }}>
-                      <div
-                        style={{
-                          width: 320,
-                          height: 180,
-                          marginTop: 10,
-                          background: `url(${p.image})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center center',
-                        }}/>
                       <h4>{p.title}</h4>
+                      <GatsbyImage
+                        fixed={data.image.nodes.find(node => p.image == node.childImageSharp.fixed.originalName).childImageSharp.fixed}
+                        alt={p.title}
+                      />
                       <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
                     </div>
                   </Link>
                 </Col>
-              )).reverse()}
-            </Row>
-          </Grid>
-        </div>
-      </Layout>
-    )
-  }
+              ))
+            }
+          </Row>
+        </Grid>
+      </div>
+    </Layout>
+  )
 }
 
 export default projectIndex
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`

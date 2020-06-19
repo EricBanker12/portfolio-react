@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "title": "Gigapet",
+  "image": "image3.jpg",
+  "color": "#b0ba06",
+  "background": "#ffffff",
+  "paragraphs": [
+    "Gigapet is a web app for parents to track the eating habits of their children while motivating the kids by giving their digital pet energy with every meal."
+  ],
+  "bullets": [
+    "Performed as a Front-End Developer on a remote team of 6 consisting of 1 UI Developer, 3 Front-End Developers, 1 Back-End Developer, and 1 UX Designer.",
+    "Programmed modal popups, meal selection, meal history, and pet CSS animation.",
+    "Incorporated Redux for state management and worked with both functional and classical React components",
+    "Built using Axios, JavaScript, React.js, Redux.js, and styled-components."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/BW-Gigapet/Frontend",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://giga-pet.netlify.com/"
+}

@@ -1,0 +1,23 @@
+{
+  "id": 6,
+  "title": "Tower Maze",
+  "image": "image6.jpg",
+  "color": "#000000",
+  "background": "#ffffff",
+  "paragraphs": [
+    "Tower Maze is a real-time, multiplayer maze exploration game utilizing WebSocket and depth-first traversal maze generation."
+  ],
+  "bullets": [
+    "Performed as a Full-Stack Developer on a remote team of 5 Full-Stack Developers over a 4 day period.",
+    "Programmed back-end maze creation algorithm and optimized database usage to multiply generation speed to over 1000 times faster.",
+    "Constructed sprites and canvas draw calls to display the mazes, adjusted styling for desktop and mobile devices, and programmed keyboard input for the Angular front-end.",
+    "Built using Angular, Django, Material-UI, Pipenv, PostgreSQL, Python, and TypeScript."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/tower-maze",
+      "text": "GitHub Repositories"
+    }
+  ],
+  "website": "https://tower-maze.netlify.com/"
+}

@@ -6,10 +6,13 @@ module.exports = {
     siteUrl: 'https://www.ericbanker.com',
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

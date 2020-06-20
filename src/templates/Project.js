@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { FaArrowLeft } from 'react-icons/fa'
 import GatsbyImage from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
+import NavLink from '../components/NavLink'
 
 function Project({ pageContext, data }) {
   
@@ -25,7 +26,7 @@ function Project({ pageContext, data }) {
           {name: `twitter:image`, content: seoImage},
         ]}
       />
-      <Link to="/projects" style={{display: 'inline-block', marginTop: '1em'}}><FaArrowLeft/> Back&nbsp;</Link>
+      <NavLink to="/projects" style={{display: 'inline-block', marginTop: '1em'}}><FaArrowLeft/> Back&nbsp;</NavLink>
       <Header title={<a href={website}>{title}</a>} />
 
       {!video && (

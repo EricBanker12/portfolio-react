@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaHome, FaCog, FaShapes, FaGraduationCap } from 'react-icons/fa'
-import { IoMdText } from 'react-icons/io'
-import { Link } from 'gatsby'
+
+import NavLink from './NavLink'
 
 class Navbar extends React.Component {
   render() {
@@ -24,11 +24,10 @@ class Navbar extends React.Component {
             flexWrap: 'wrap',
           }}
         >
-          <Link to={'/'}><FaHome /> Home&nbsp;</Link>
-          <Link to={'/skills'}><FaCog /> Skills&nbsp;</Link>
-          <Link to={'/projects'}><FaShapes /> Projects&nbsp;</Link>
-          <Link to={'/education'}><FaGraduationCap /> Education&nbsp;</Link>
-          {/* <Link to={'/blog'}><IoMdText /> Blog&nbsp;</Link> */}
+          <NavLink to={'/'}><FaHome /> Home&nbsp;</NavLink>
+          <NavLink to={'/skills'}><FaCog /> Skills&nbsp;</NavLink>
+          <NavLink to={'/projects'}><FaShapes /> Projects&nbsp;</NavLink>
+          <NavLink to={'/education'}><FaGraduationCap /> Education&nbsp;</NavLink>
         </nav>
       </header>
     )

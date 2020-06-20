@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

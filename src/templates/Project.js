@@ -10,13 +10,21 @@ import Header from '../components/Header'
 function Project({ pageContext, data }) {
   
   const { title, website, video, paragraphs, bullets, links } = pageContext
-
   const fluid = data.file.childImageSharp.fluid
+  const site = data.site.siteMetadata.siteUrl
+  const seoImage = site + fluid.src
 
   return (
     <Layout>
       
-      <SEO title={title} description={paragraphs[0]} />
+      <SEO
+        title={title}
+        description={paragraphs[0]}
+        meta={[
+          {property: `og:image`, content: seoImage},
+          {name: `twitter:image`, content: seoImage},
+        ]}
+      />
       <Link to="/projects"><FaArrowLeft/> Back&nbsp;</Link>
       <Header title={<a href={website}>{title}</a>} />
 
@@ -51,6 +59,11 @@ export const query = graphql`
         fluid(maxWidth: 760, quality: 90, traceSVG: {color: $color, background: $background}) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

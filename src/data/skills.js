@@ -26,45 +26,52 @@ const data = [
     ],
   },
   {
-    Technology: 'Node.js',
-    Website: '',
+    Technology: 'React.js',
+    Website: 'https://reactjs.org',
     Description: [
-      '',
+      'A library developed by Facebook which moves document creation from HTML to JavaScript with added simplicity and performance optimizations.',
+      'Used as the base for many frameworks for developing web applications (GatsbyJS, Next.js, etc), JavaScript modules (NPM), and native applications (React Native).',
     ],
   },
   {
-    Technology: 'React.js',
-    Website: '',
+    Technology: 'Node.js',
+    Website: 'https://nodejs.org/en/about',
     Description: [
-      '',
+      'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
+      'Used to run JavaScript outside of a web browser, for running servers or building native applications.',
     ],
   },
   {
     Technology: 'Jest',
-    Website: '',
+    Website: 'https://jestjs.io',
     Description: [
-      '',
+      'A highly compatible JavaScript Testing Framework with a focus on simplicity.',
+      'Supports snapshot tests, integration tests, unit tests, dependency mocking, code coverage, and more.',
+      'Jest is a fork and superset of Jasmine, with extra features and performance improvements.',
     ],
   },
   {
     Technology: 'SASS/SCSS',
-    Website: '',
+    Website: 'https://sass-lang.com',
     Description: [
-      '',
+      'A CSS Preprocessor, SASS is a superscript of CSS style sheet language with extra features.',
+      `Used to enhance readability, optimize output, separate large files, and improve code reuse.`,
     ],
   },
   {
     Technology: 'TypeScript',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/TypeScript',
     Description: [
-      '',
+      'A superset of JavaScript programming language developed by Microsoft adding optional static typing to the language.',
+      'Used to catch type errors at compile time, better IDE code-suggestion, and polyfilling latest syntax and features (ES6/ES2015+) to older-browser-compatible JavaScript.',
     ],
   },
   {
     Technology: 'PHP',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/PHP',
     Description: [
-      '',
+      'A general purpose scripting language, usually processed on a web server.',
+      'Used to create APIs or serve server-generated html built from templates with built-in scripts.',
     ],
   },
   {

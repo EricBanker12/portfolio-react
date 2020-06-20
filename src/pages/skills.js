@@ -1,4 +1,5 @@
 import React from 'react'
+import Highlight from 'react-highlight-words'
 import {
   Table,
   TableBody,
@@ -23,6 +24,7 @@ class Skills extends React.Component {
     activeLabel: 'Technology',
     activeDirection: 'desc',
     filter: '',
+    filterRegExp: new RegExp(''),
     filterIgnoreCase: true,
     filterExclude: {},
   }
@@ -37,6 +39,30 @@ class Skills extends React.Component {
       const activeLabel = name
       const activeDirection = 'desc'
       this.setState({activeLabel, activeDirection})
+    }
+  }
+
+  filterHandler = (event) => {
+    try {
+      const filter = event.target.value.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
+      const filterRegExp = new RegExp(filter, this.state.filterIgnoreCase ? 'i' : '')
+      this.setState({filter: event.target.value, filterRegExp})
+    }
+    catch (err) {
+      console.error(err.message)
+      this.setState({filter: event.target.value})
+    }
+  }
+
+  filterIgnoreCaseHandler = (event) => {
+    try {
+      const filter = this.state.filter.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
+      const filterRegExp = new RegExp(filter, event.target.checked ? 'i' : '')
+      this.setState({filterIgnoreCase: event.target.checked, filterRegExp})
+    }
+    catch (err) {
+      console.error(err.message)
+      this.setState({filterIgnoreCase: event.target.checked})
     }
   }
 
@@ -78,22 +104,12 @@ class Skills extends React.Component {
 
   filterTableHandler = (skill) => {
     if (!this.state.filter) return true
-    
-    try {
-      const input = this.state.filter.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
-      const filter = new RegExp(input, this.state.filterIgnoreCase ? 'i' : '')
-      
-      for (let category of categories) {
-        if (!this.state.filterExclude[category] && filter.test(skill[category])) return true
-      }
-      
-      return false
+
+    for (let category of categories) {
+      if (!this.state.filterExclude[category] && this.state.filterRegExp.test(skill[category])) return true
     }
     
-    catch (err) {
-      console.error(err.message)
-      return true
-    }
+    return false
   }
 
   render() {
@@ -108,7 +124,7 @@ class Skills extends React.Component {
           placeholder='Use | to multi-filter: C++|Python'
           style={{width: '100%'}}
           value={this.state.filter}
-          onChange={(e) => {this.setState({filter: e.target.value})}}
+          onChange={this.filterHandler}
         />
         
         <FormControlLabel label='Ignore Case' control={
@@ -116,12 +132,12 @@ class Skills extends React.Component {
             style={{color: '#4078c0'}}
             color='primary'
             checked={this.state.filterIgnoreCase}
-            onChange={(e) => {this.setState({filterIgnoreCase: e.target.checked})}}
+            onChange={this.filterIgnoreCaseHandler}
           />
         }/>
 
         {categories.map(category => (
-          <FormControlLabel label={`Apply to ${category}`} control={
+          <FormControlLabel key={category} label={`Apply to ${category}`} control={
             <Checkbox
               style={{color: '#4078c0'}}
               color='primary'
@@ -138,7 +154,7 @@ class Skills extends React.Component {
           <TableHead>
             <TableRow>
               {categories.map(category => (
-                <TableCell>
+                <TableCell key={category}>
                   <TableSortLabel
                     name={category}
                     style={{fontWeight: 'bold'}}
@@ -151,7 +167,7 @@ class Skills extends React.Component {
               ))}
             </TableRow>
           </TableHead>
-          
+
           <TableBody>
             {skillsData
               .filter(this.filterTableHandler)
@@ -159,11 +175,25 @@ class Skills extends React.Component {
               .map((skill) => (
               <TableRow key={skill.Technology}>
                 <TableCell>
-                  <a href={skill.Website}>{skill.Technology}</a>
+                  <a href={skill.Website}>
+                    <Highlight
+                      caseSensitive={!this.state.filterIgnoreCase}
+                      searchWords={[!this.state.filterExclude.Technology ? this.state.filterRegExp : '']}
+                      textToHighlight={skill.Technology}
+                    />
+                  </a>
                 </TableCell>
                 <TableCell>
                   <ul style={{marginLeft: '1rem'}}>
-                    {skill.Description.map(bullet => <li>{bullet}</li>)}
+                    {skill.Description.map((bullet, i) => (
+                      <li key={i}>
+                        <Highlight
+                          caseSensitive={!this.state.filterIgnoreCase}
+                          searchWords={[!this.state.filterExclude.Description ? this.state.filterRegExp : '']}
+                          textToHighlight={bullet}
+                        />
+                      </li>
+                    ))}
                   </ul>
                 </TableCell>
               </TableRow>

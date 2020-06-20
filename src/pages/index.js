@@ -17,13 +17,28 @@ function SiteIndex() {
           }
         }
       }
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
     }
   `)
+
+  const fluid = data.me.childImageSharp.fluid
+  const site = data.site.siteMetadata.siteUrl
+  const seoImage = site + fluid.src
 
   return (
     <Layout>
 
-      <SEO title='Home'/>
+      <SEO
+        title='Home'
+        meta={[
+          {property: `og:image`, content: seoImage},
+          {name: `twitter:image`, content: seoImage},
+        ]}
+      />
       <Header title='Home' next='Skills'/>
 
       <p>
@@ -50,8 +65,9 @@ function SiteIndex() {
       </p>
 
       <GatsbyImage
-        fluid={data.me.childImageSharp.fluid}
-        alt='Eric Banker' />
+        fluid={fluid}
+        alt='Eric Banker'
+      />
 
     </Layout>
   )

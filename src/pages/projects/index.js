@@ -60,7 +60,7 @@ function projectIndex() {
                         fixed={data.image.nodes.find(node => p.image == node.childImageSharp.fixed.originalName).childImageSharp.fixed}
                         alt={p.title}
                       />
-                      <p>{`${p.paragraphs[0].slice(0,80)}...`}</p>
+                      <p>{`${p.paragraphs[0].slice(0,60)}...`}</p>
                     </div>
                   </Link>
                 </Col>

@@ -1,23 +1,32 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { FaArrowLeft } from 'react-icons/fa'
 import GatsbyImage from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
+import NavLink from '../components/NavLink'
 
 function Project({ pageContext, data }) {
   
   const { title, website, video, paragraphs, bullets, links } = pageContext
-
   const fluid = data.file.childImageSharp.fluid
+  const site = data.site.siteMetadata.siteUrl
+  const seoImage = site + fluid.src
 
   return (
     <Layout>
       
-      <SEO title={title} description={paragraphs[0]} />
-      <Link to="/projects"><FaArrowLeft/> Back&nbsp;</Link>
+      <SEO
+        title={title}
+        description={paragraphs[0]}
+        meta={[
+          {property: `og:image`, content: seoImage},
+          {name: `twitter:image`, content: seoImage},
+        ]}
+      />
+      <NavLink to="/projects" style={{display: 'inline-block', marginTop: '1em'}}><FaArrowLeft/> Back&nbsp;</NavLink>
       <Header title={<a href={website}>{title}</a>} />
 
       {!video && (
@@ -51,6 +60,11 @@ export const query = graphql`
         fluid(maxWidth: 760, quality: 90, traceSVG: {color: $color, background: $background}) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

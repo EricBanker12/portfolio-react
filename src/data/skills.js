@@ -1,255 +1,463 @@
 const data = [
   {
-    technology: 'JavaScript',
-    description: 'Web Development Language',
+    Technology: 'JavaScript',
+    Website: 'https://en.wikipedia.org/wiki/JavaScript',
+    Description: [
+      'The standard programming language of the web.',
+      'Used for client-side web page interaction and behavior.',
+      'Also used for servers (Node.js), desktop applications (Electron.js), and mobile apps (React Native).',
+    ]
   },
   {
-    technology: 'HTML',
-    description: 'Web Development (Front-End) Language',
+    Technology: 'HTML',
+    Website: 'https://en.wikipedia.org/wiki/HTML',
+    Description: [
+      'Hypertext Markup Language is the standard markup language web for pages.',
+      'Used to create skeletal structure of a web page and add meta information for search engine optimization (SEO) and social media embedding.',
+      'Used with CSS for styling and JavaScript for events and actions.',
+    ],
   },
   {
-    technology: 'CSS',
-    description: 'Web Development (Front-End) Language',
+    Technology: 'CSS',
+    Website: 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets',
+    Description: [
+      'Cascading Style Sheets is a style sheet language used for the presentation of HTML web pages.',
+      'Used for color, layout, animation, device responsiveness, and more.',
+    ],
   },
   {
-    technology: 'Node.js',
-    description: 'Web Development Other',
+    Technology: 'Node.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'React.js',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'React.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Jest',
-    description: 'Web Development Framework',
+    Technology: 'Jest',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'SASS/SCSS',
-    description: 'Web Development (Front-End) Language',
+    Technology: 'SASS/SCSS',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'TypeScript',
-    description: 'Web Development Language',
+    Technology: 'TypeScript',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'PHP',
-    description: 'Web Development Language',
+    Technology: 'PHP',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Git BASH',
-    description: 'Computer Science CLI',
+    Technology: 'Git BASH',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'npm',
-    description: 'Web Development Other',
+    Technology: 'NPM',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Electron.js',
-    description: 'Web Development (Front-End) Framework',
+    Technology: 'Electron.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'R',
-    description: 'Data Science Language',
+    Technology: 'R',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Python',
-    description: 'Computer Science Language',
+    Technology: 'Python',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'C/C++',
-    description: 'Computer Science Language',
+    Technology: 'C',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Java',
-    description: 'Computer Science Language',
+    Technology: 'C++',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'SuperTest',
-    description: 'Web Development (Back-End) Library',
+    Technology: 'Java',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'React Testing Library',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'SuperTest',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Knex.js',
-    description: 'Web Development (Back-End) Framework',
+    Technology: 'React Testing Library',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'TypeORM',
-    description: 'Web Development (Back-End) Framework',
+    Technology: 'Knex.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'PostgreSQL',
-    description: 'Web Development (Back-End) Other',
+    Technology: 'TypeORM',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Redux.js',
-    description: 'Web Development Library',
+    Technology: 'PostgreSQL',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Redux Thunk',
-    description: 'Web Development Library',
+    Technology: 'Redux.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'jQuery',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'Redux Thunk',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Bootstrap',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'jQuery',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Material-UI',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'Bootstrap',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Angular',
-    description: 'Web Development (Front-End) Framework',
+    Technology: 'Material-UI',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Express.js',
-    description: 'Web Development (Back-End) Framework',
+    Technology: 'Angular',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Django',
-    description: 'Web Development Framework',
+    Technology: 'Express.js',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'SQLite',
-    description: 'Web Development (Back-End) Other',
+    Technology: 'Django',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'LESS',
-    description: 'Web Development (Front-End) Language',
+    Technology: 'SQLite',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Axios',
-    description: 'Web Development Library',
+    Technology: 'LESS',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'JSON Web Token (JWT)',
-    description: 'Web Development Other',
+    Technology: 'Axios',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Session Management',
-    description: 'Web Development Other',
+    Technology: 'JSON Web Token (JWT)',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'SQL',
-    description: 'Data Science Language',
+    Technology: 'Session Management',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Flask',
-    description: 'Web Development Framework',
+    Technology: 'SQL',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Pipenv',
-    description: 'Computer Science Other',
+    Technology: 'Flask',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'AutoHotKey',
-    description: 'Computer Science Language',
+    Technology: 'Pipenv',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'GraphQL',
-    description: 'Web Development Language',
+    Technology: 'AutoHotKey',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Pandas',
-    description: 'Data Science Library',
+    Technology: 'GraphQL',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'styled-components',
-    description: 'Web Development (Front-End) Library',
+    Technology: 'Pandas',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'bcrypt',
-    description: 'Web Development (Back-End) Library',
+    Technology: 'styled-components',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Markdown',
-    description: 'Computer Science Language',
+    Technology: 'bcrypt',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'PIP',
-    description: 'Computer Science Other',
+    Technology: 'Markdown',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Spring',
-    description: 'Computer Science Framework',
+    Technology: 'PIP',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Spring Boot',
-    description: 'Web Development (Back-End) Other',
+    Technology: 'Spring',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Maven',
-    description: 'Computer Science Other',
+    Technology: 'Spring Boot',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Create React App',
-    description: 'Web Development (Front-End) Other',
+    Technology: 'Maven',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'GatsbyJS',
-    description: 'Web Development (Front-End) Framework',
+    Technology: 'Create React App',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Heroku',
-    description: 'Web Development Other',
+    Technology: 'GatsbyJS',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'JUnit',
-    description: 'Computer Science Framework',
+    Technology: 'Heroku',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'AWS',
-    description: 'Web Development Other',
+    Technology: 'JUnit',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Apache Tomcat',
-    description: 'Web Development (Back-End) Other',
+    Technology: 'AWS',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Netty',
-    description: 'Web Development (Back-End) Framework',
+    Technology: 'Apache Tomcat',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Kubernetes',
-    description: 'Computer Science Other',
+    Technology: 'Netty',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Docker',
-    description: 'Computer Science Other',
+    Technology: 'Kubernetes',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Yarn',
-    description: 'Web Development Other',
+    Technology: 'Docker',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Webpack',
-    description: 'Web Development Other',
+    Technology: 'Yarn',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Babel',
-    description: 'Web Development Other',
+    Technology: 'Webpack',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'MongoDB',
-    description: 'Web Development (Back-End) Other',
+    Technology: 'Babel',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Netlify',
-    description: 'Web Development Other',
+    Technology: 'MongoDB',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Vercel/Zeit',
-    description: 'Web Development Other',
+    Technology: 'Netlify',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
   {
-    technology: 'Cloudflare',
-    description: 'Web Development Other',
+    Technology: 'Vercel/Zeit',
+    Website: '',
+    Description: [
+      '',
+    ],
+  },
+  {
+    Technology: 'Cloudflare',
+    Website: '',
+    Description: [
+      '',
+    ],
+  },
+  {
+    Technology: 'Figma',
+    Website: '',
+    Description: [
+      '',
+    ],
   },
 ]
 

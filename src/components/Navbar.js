@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaHome, FaCog, FaShapes, FaGraduationCap } from 'react-icons/fa'
+import { FaHome, FaCog, FaShapes, FaGraduationCap, FaEnvelope } from 'react-icons/fa'
 
 import NavLink from './NavLink'
 
@@ -28,6 +28,7 @@ class Navbar extends React.Component {
           <NavLink to={'/skills'}><FaCog /> Skills&nbsp;</NavLink>
           <NavLink to={'/projects'}><FaShapes /> Projects&nbsp;</NavLink>
           <NavLink to={'/education'}><FaGraduationCap /> Education&nbsp;</NavLink>
+          <NavLink to={'#contact'}><FaEnvelope /> Contact&nbsp;</NavLink>
         </nav>
       </header>
     )

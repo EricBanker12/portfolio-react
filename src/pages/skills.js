@@ -50,6 +50,11 @@ class Skills extends React.Component {
       b = b.toLowerCase()
     }
 
+    if (Array.isArray(a)) {
+      a = a.join('\n').length
+      b = b.join('\n').length
+    }
+
     if (a === b) return 0
 
     if (a < b) {
@@ -79,7 +84,7 @@ class Skills extends React.Component {
       const filter = new RegExp(input, this.state.filterIgnoreCase ? 'i' : '')
       
       for (let category of categories) {
-        if (!this.state.filterExclude[category] && filter.test(skill[category.toLowerCase()])) return true
+        if (!this.state.filterExclude[category] && filter.test(skill[category])) return true
       }
       
       return false
@@ -100,7 +105,7 @@ class Skills extends React.Component {
 
         <TextField
           label='Filter'
-          placeholder='Separate multiple filters with a | character (example: "C++|Python").'
+          placeholder='Use | to multi-filter: C++|Python'
           style={{width: '100%'}}
           value={this.state.filter}
           onChange={(e) => {this.setState({filter: e.target.value})}}
@@ -109,6 +114,7 @@ class Skills extends React.Component {
         <FormControlLabel label='Ignore Case' control={
           <Checkbox
             style={{color: '#4078c0'}}
+            color='primary'
             checked={this.state.filterIgnoreCase}
             onChange={(e) => {this.setState({filterIgnoreCase: e.target.checked})}}
           />
@@ -118,6 +124,7 @@ class Skills extends React.Component {
           <FormControlLabel label={`Apply to ${category}`} control={
             <Checkbox
               style={{color: '#4078c0'}}
+              color='primary'
               checked={!this.state.filterExclude[category]}
               onChange={(e) => {
                 this.state.filterExclude[category] = !e.target.checked
@@ -127,42 +134,42 @@ class Skills extends React.Component {
           }/>
         ))}
 
-        <div style={{maxWidth: '100%', overflow: 'auto'}}>
-          <Table style={{width: '100%'}}>
-            <TableHead>
-              <TableRow>
-                {categories.map(category => (
-                  <TableCell>
-                    <TableSortLabel
-                      name={category}
-                      style={{fontWeight: 'bold'}}
-                      onClick={this.labelClickHandler}
-                      active={this.state.activeLabel === category}
-                      direction={this.state.activeLabel === category ? this.state.activeDirection : 'desc'}>
-                      {category}
-                    </TableSortLabel>
-                  </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            
-            <TableBody>
-              {skillsData
-                .filter(this.filterTableHandler)
-                .sort(this.sortTableHandler)
-                .map((skill) => (
-                <TableRow key={skill.technology}>
-                  <TableCell>
-                    {skill.technology}
-                  </TableCell>
-                  <TableCell>
-                    {skill.description}
-                  </TableCell>
-                </TableRow>
+        <Table style={{width: '100%'}}>
+          <TableHead>
+            <TableRow>
+              {categories.map(category => (
+                <TableCell>
+                  <TableSortLabel
+                    name={category}
+                    style={{fontWeight: 'bold'}}
+                    onClick={this.labelClickHandler}
+                    active={this.state.activeLabel === category}
+                    direction={this.state.activeLabel === category ? this.state.activeDirection : 'desc'}>
+                    {category}
+                  </TableSortLabel>
+                </TableCell>
               ))}
-            </TableBody>
-          </Table>
-        </div>
+            </TableRow>
+          </TableHead>
+          
+          <TableBody>
+            {skillsData
+              .filter(this.filterTableHandler)
+              .sort(this.sortTableHandler)
+              .map((skill) => (
+              <TableRow key={skill.Technology}>
+                <TableCell>
+                  <a href={skill.Website}>{skill.Technology}</a>
+                </TableCell>
+                <TableCell>
+                  <ul style={{marginLeft: '1rem'}}>
+                    {skill.Description.map(bullet => <li>{bullet}</li>)}
+                  </ul>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
 
       </Layout>
     )

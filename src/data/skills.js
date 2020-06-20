@@ -299,6 +299,21 @@ const data = [
     field: 'Web Development (Back-End)',
     category: 'Other',
   },
+  {
+    technology: 'Netlify',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'Vercel/Zeit',
+    field: 'Web Development',
+    category: 'Other',
+  },
+  {
+    technology: 'Cloudflare',
+    field: 'Web Development',
+    category: 'Other',
+  },
 ]
 
 export default data

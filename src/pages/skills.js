@@ -7,6 +7,8 @@ import {
   TableRow,
   TableSortLabel,
   TextField,
+  Checkbox,
+  FormControlLabel,
 } from '@material-ui/core'
 
 import Layout from '../components/Layout'
@@ -14,8 +16,16 @@ import skillsData from './../data/skills'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
 
+const categories = ['Technology', 'Description']
+
 class Skills extends React.Component {
-  state = {activeLabel: 'technology', activeDirection: 'desc', filter: ''}
+  state = {
+    activeLabel: 'Technology',
+    activeDirection: 'desc',
+    filter: '',
+    filterIgnoreCase: true,
+    filterExclude: {},
+  }
 
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
@@ -65,13 +75,18 @@ class Skills extends React.Component {
     if (!this.state.filter) return true
     
     try {
-      const filter = new RegExp(this.state.filter, 'i')
-      if (filter.test(skill.technology)) return true
-      if (filter.test(skill.category)) return true
-      if (filter.test(skill.field)) return true
+      const input = this.state.filter.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
+      const filter = new RegExp(input, this.state.filterIgnoreCase ? 'i' : '')
+      
+      for (let category of categories) {
+        if (!this.state.filterExclude[category] && filter.test(skill[category.toLowerCase()])) return true
+      }
+      
       return false
     }
+    
     catch (err) {
+      console.error(err.message)
       return true
     }
   }
@@ -85,45 +100,49 @@ class Skills extends React.Component {
 
         <TextField
           label='Filter'
-          placeholder='Type a Technology, Category, or Field. Separate multiple filters with a | character.'
+          placeholder='Separate multiple filters with a | character (example: "C++|Python").'
           style={{width: '100%'}}
           value={this.state.filter}
-          onChange={(e) => {this.setState({filter: e.target.value})}} />
+          onChange={(e) => {this.setState({filter: e.target.value})}}
+        />
+        
+        <FormControlLabel label='Ignore Case' control={
+          <Checkbox
+            style={{color: '#4078c0'}}
+            checked={this.state.filterIgnoreCase}
+            onChange={(e) => {this.setState({filterIgnoreCase: e.target.checked})}}
+          />
+        }/>
+
+        {categories.map(category => (
+          <FormControlLabel label={`Apply to ${category}`} control={
+            <Checkbox
+              style={{color: '#4078c0'}}
+              checked={!this.state.filterExclude[category]}
+              onChange={(e) => {
+                this.state.filterExclude[category] = !e.target.checked
+                this.setState({filterExclude: this.state.filterExclude})
+              }}
+            />
+          }/>
+        ))}
+
         <div style={{maxWidth: '100%', overflow: 'auto'}}>
           <Table style={{width: '100%'}}>
-            
             <TableHead>
               <TableRow>
-                <TableCell>
-                  <TableSortLabel
-                    name='technology'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'technology'}
-                    direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
-                    Technology
-                  </TableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='category'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'category'}
-                    direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
-                    Category
-                  </TableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='field'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'field'}
-                    direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>
-                    Field
-                  </TableSortLabel>
-                </TableCell>
+                {categories.map(category => (
+                  <TableCell>
+                    <TableSortLabel
+                      name={category}
+                      style={{fontWeight: 'bold'}}
+                      onClick={this.labelClickHandler}
+                      active={this.state.activeLabel === category}
+                      direction={this.state.activeLabel === category ? this.state.activeDirection : 'desc'}>
+                      {category}
+                    </TableSortLabel>
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
             
@@ -137,15 +156,11 @@ class Skills extends React.Component {
                     {skill.technology}
                   </TableCell>
                   <TableCell>
-                    {skill.category}
-                  </TableCell>
-                  <TableCell>
-                    {skill.field}
+                    {skill.description}
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
-          
           </Table>
         </div>
 

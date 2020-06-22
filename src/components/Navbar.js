@@ -6,18 +6,12 @@ import NavLink from './NavLink'
 class Navbar extends React.Component {
   render() {
     return (
-      <header
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}
-      >
+      <header>
         <nav
           style={{
             width: '100%',
             maxWidth: '35rem',
+            margin: '0 auto',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-around',

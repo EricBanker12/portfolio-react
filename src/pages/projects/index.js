@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { useStaticQuery, graphql } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
 
 import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
 import Header from '../../components/Header'
+import NavLink from '../../components/NavLink'
 
 function projectIndex() {
   
@@ -22,9 +22,9 @@ function projectIndex() {
       image: allFile(filter: {relativePath: {regex: "/image\\d\\.jpg/"}}) {
         nodes {
           childImageSharp {
-            fixed(width: 320, quality: 90) {
+            fluid(maxWidth: 384, quality: 90) {
               originalName
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -40,34 +40,36 @@ function projectIndex() {
 
       <p>Click on a project to view details.</p>
 
-      <div style={{textAlign: 'center'}}>
-        <Grid fluid>
-          <Row>
-            {data.json.nodes
-              .sort((a, b) => a.id - b.id)
-              .reverse()
-              .map(p => (
-                <Col xs={12} sm={12} md={6} lg={6} key={p.id}>
-                  <Link to={`/projects/${p.id}`}>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                      }}>
-                      <h4>{p.title}</h4>
-                      <GatsbyImage
-                        fixed={data.image.nodes.find(node => p.image == node.childImageSharp.fixed.originalName).childImageSharp.fixed}
-                        alt={p.title}
-                      />
-                      <p>{`${p.paragraphs[0].slice(0,60)}...`}</p>
-                    </div>
-                  </Link>
-                </Col>
-              ))
-            }
-          </Row>
-        </Grid>
+      <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', textAlign: 'center'}}>
+        {data.json.nodes
+          .sort((a, b) => a.id - b.id)
+          .reverse()
+          .map(p => (
+              <NavLink to={`/projects/${p.id}`} key={p.id}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  }}>
+                  <h4>{p.title}</h4>
+                  <GatsbyImage
+                    fluid={data.image.nodes.find(node => p.image == node.childImageSharp.fluid.originalName).childImageSharp.fluid}
+                    alt={p.title}
+                    style={{width: '20rem'}}
+                  />
+                  <p style={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    width: '20rem'
+                  }}>
+                    {p.paragraphs[0]}
+                  </p>
+                </div>
+              </NavLink>
+          ))
+        }
       </div>
     </Layout>
   )

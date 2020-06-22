@@ -3,8 +3,7 @@ const data = [
     Technology: 'JavaScript',
     Website: 'https://en.wikipedia.org/wiki/JavaScript',
     Description: [
-      'The standard programming language of the web.',
-      'Used for client-side web page interaction and behavior.',
+      'A programming language for client-side web page interaction and behavior.',
       'Also used for servers (Node.js), desktop applications (Electron.js), and mobile apps (React Native).',
     ]
   },
@@ -12,8 +11,7 @@ const data = [
     Technology: 'HTML',
     Website: 'https://en.wikipedia.org/wiki/HTML',
     Description: [
-      'Hypertext Markup Language is the standard markup language web for pages.',
-      'Used to create skeletal structure of a web page and add meta information for search engine optimization (SEO) and social media embedding.',
+      'Hypertext Markup Language is used to create web page elements and meta data for search engines (SEO) and social media.',
       'Used with CSS for styling and JavaScript for events and actions.',
     ],
   },
@@ -27,17 +25,17 @@ const data = [
   },
   {
     Technology: 'React.js',
-    Website: 'https://reactjs.org',
+    Website: 'https://en.wikipedia.org/wiki/React_(web_framework)',
     Description: [
-      'A library developed by Facebook which moves document creation from HTML to JavaScript with added simplicity and performance optimizations.',
-      'Used as the base for many frameworks for developing web applications (GatsbyJS, Next.js, etc), JavaScript modules (NPM), and native applications (React Native).',
+      'A library developed by Facebook which moves document creation from HTML to JavaScript with added simplicity and performance.',
+      'Used for developing single-page (GatsbyJS, Next.js, etc) and mobile (React Native) applications.',
     ],
   },
   {
     Technology: 'Node.js',
     Website: 'https://nodejs.org/en/about',
     Description: [
-      'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
+      'A JavaScript runtime designed to build scalable, network applications.',
       'Used to run JavaScript outside of a web browser, for running servers or building native applications.',
     ],
   },
@@ -51,10 +49,10 @@ const data = [
     ],
   },
   {
-    Technology: 'SASS/SCSS',
+    Technology: 'SASS',
     Website: 'https://sass-lang.com',
     Description: [
-      'A CSS Preprocessor, SASS is a superscript of CSS style sheet language with extra features.',
+      'A CSS Preprocessor, SASS (or more closely, SCSS) is a superscript of CSS style sheet language with extra features.',
       `Used to enhance readability, optimize output, separate large files, and improve code reuse.`,
     ],
   },
@@ -75,171 +73,187 @@ const data = [
     ],
   },
   {
-    Technology: 'Git BASH',
-    Website: '',
+    Technology: 'Git',
+    Website: 'https://git-scm.com/about',
     Description: [
-      '',
+      'A collaboration and version control tool featuring branching, merging, history tracking, and more.',
+      'For collaboration, source code git repositories are usually pushed to cloud hosts such as GitHub, GitLab, Bitbucket, and more.',
+    ],
+  },
+  {
+    Technology: 'Bash (Unix shell)',
+    Website: 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)',
+    Description: [
+      'A command line interface (CLI) commonly used to read, run, navigate, and modify directories and files on Unix operating systems.',
+      'Git for windows also installs an emulated Bash terminal for windows operating systems.',
     ],
   },
   {
     Technology: 'NPM',
-    Website: '',
+    Website: 'https://docs.npmjs.com/about-npm',
     Description: [
-      '',
+      'Node Package Manager is a public registry and manager for creation, publishing, and installation of JavaScript compatible modules.',
     ],
   },
   {
     Technology: 'Electron.js',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Electron_(software_framework)',
     Description: [
-      '',
+      'A framework for building desktop applications from web technologies (HTML, CSS, JavaScript, and more) by using Chromium browser engine and Node.js runtime.',
     ],
   },
   {
     Technology: 'R',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/R_(programming_language)',
     Description: [
-      '',
+      'A programming language for calculating or developing software for statistics, graphing, or data analysis.',
     ],
   },
   {
     Technology: 'Python',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Python_(programming_language)',
     Description: [
-      '',
+      'A programming language known for ease of use and readability, often used for data science, web development, and software prototyping.',
     ],
   },
   {
     Technology: 'C',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/C_(programming_language)',
     Description: [
-      '',
+      'A programming language from 1970s still used today for performance and low-level access.',
     ],
   },
   {
     Technology: 'C++',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/C%2B%2B',
     Description: [
-      '',
+      'A superset of the C programming language with added features and version or platform specific alterations.',
     ],
   },
   {
     Technology: 'Java',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Java_(programming_language)',
     Description: [
-      '',
+      'An object oriented programming language developed by Oracle featuring high platform compatability through the Java Virtual Machine (JVM).',
     ],
   },
   {
-    Technology: 'SuperTest',
-    Website: '',
+    Technology: 'Supertest',
+    Website: 'https://www.npmjs.com/package/supertest',
     Description: [
-      '',
+      'A JavaScript library for testing HTTP assertions via Superagent, an Ajax (Asynchronous JavaScript and XML) client',
     ],
   },
   {
     Technology: 'React Testing Library',
-    Website: '',
+    Website: 'https://testing-library.com/docs/react-testing-library/intro',
     Description: [
-      '',
+      'A JavaScript library for testing React component rendering and functionality by mocking events and user input.',
     ],
   },
   {
     Technology: 'Knex.js',
-    Website: '',
+    Website: 'http://knexjs.org',
     Description: [
-      '',
+      'A JavaScript library for building database agnostic SQL queries.',
     ],
   },
   {
     Technology: 'TypeORM',
-    Website: '',
+    Website: 'https://typeorm.io/#/',
     Description: [
-      '',
+      'A TypeScript library for building database agnostic SQL queries.',
     ],
   },
   {
     Technology: 'PostgreSQL',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/PostgreSQL',
     Description: [
-      '',
+      'A free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.',
     ],
   },
   {
     Technology: 'Redux.js',
-    Website: '',
+    Website: 'https://redux.js.org',
     Description: [
-      '',
+      'A JavaScript library for simplifying the sharing, modification, event response of an application\'s global state.',
+      'Redux simplifies state management through encapsulation (reducers) and abstraction (actions).',
     ],
   },
   {
     Technology: 'Redux Thunk',
-    Website: '',
+    Website: 'https://www.npmjs.com/package/redux-thunk',
     Description: [
-      '',
+      'A JavaScript library for Redux.js, featuring dynamic action creators instead explicitly creating every permutation.',
+      'A thunk is a function that wraps an expression to delay its evaluation.',
     ],
   },
   {
     Technology: 'jQuery',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/JQuery',
     Description: [
-      '',
+      'A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax (Asynchronous JavaScript and XML).',
+      'As of June, 2020, jQuery is still used by more than 75% of the 10 million most popular websites (w3techs.com).',
+      'Modern JavaScript (ES6/2015+) has already implemented the most common jQuery features into the language.',
     ],
   },
   {
     Technology: 'Bootstrap',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)',
     Description: [
-      '',
+      'A CSS framework for responsive web pages, laybout, typography, forms, buttons, navigation, and more.',
     ],
   },
   {
     Technology: 'Material-UI',
-    Website: '',
+    Website: 'https://material-ui.com/',
     Description: [
-      '',
+      'A stylized React component library for responsive web pages, laybout, typography, forms, buttons, navigation, and more.',
     ],
   },
   {
     Technology: 'Angular',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Angular_(web_framework)',
     Description: [
-      '',
+      'A TypeScript framework for developing web application from a hierarchy of components composed of an HTML template and TypeScript handler.',
     ],
   },
   {
     Technology: 'Express.js',
-    Website: '',
+    Website: 'https://expressjs.com/',
     Description: [
-      '',
+      'A Node.js JavaScript framework simplifying the creation of HTTP servers.',
     ],
   },
   {
     Technology: 'Django',
-    Website: '',
+    Website: 'https://www.djangoproject.com/start/overview/',
     Description: [
-      '',
+      'A Python framework for creating web applications, with built in tools for front end, back end, and security.',
     ],
   },
   {
     Technology: 'SQLite',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/SQLite',
     Description: [
-      '',
+      'A relational database management system (RDBMS) for a small, embedded database engine.',
+      'SQLite uses a dynamically and weakly typed SQL syntax',
     ],
   },
   {
     Technology: 'LESS',
-    Website: '',
+    Website: 'http://lesscss.org/#overview',
     Description: [
-      '',
+      'A CSS Preprocessor, LESS is a superscript of CSS style sheet language with extra features.',
+      'Less popular than SASS.',
     ],
   },
   {
     Technology: 'Axios',
-    Website: '',
+    Website: 'https://www.npmjs.com/package/axios',
     Description: [
-      '',
+      'A JavaScript library which simplifies Ajax/XMLHttpRequests and adds features and security.',
+      'More browser-compatible than modern JavaScript\'s Fetch API.',
     ],
   },
   {
@@ -446,7 +460,7 @@ const data = [
     ],
   },
   {
-    Technology: 'Vercel/Zeit',
+    Technology: 'Vercel',
     Website: '',
     Description: [
       '',

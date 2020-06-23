@@ -257,80 +257,80 @@ const data = [
     ],
   },
   {
-    Technology: 'JSON Web Token (JWT)',
-    Website: '',
+    Technology: 'JWT',
+    Website: 'https://en.wikipedia.org/wiki/JSON_Web_Token',
     Description: [
-      '',
+      'JSON Web Token is an Internet standard for creating data with optional signature and/or optional encryption whose payload holds JSON data.',
+      'Used for authentication of data, but it should never package sensitive data because the payload can always be read.',
     ],
   },
   {
-    Technology: 'Session Management',
-    Website: '',
+    Technology: 'Session management',
+    Website: 'https://en.wikipedia.org/wiki/Session_(computer_science)',
     Description: [
-      '',
+      'Using a unique session token (via an authorization HTTP cookies) to lookup a client\'s session id and information.',
+      'All data, remains server-side, unlike JWTs.',
     ],
   },
   {
     Technology: 'SQL',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/SQL',
     Description: [
-      '',
+      'Structured Query Language is a language used in programming and designed for managing data held in a relational database management system (RDBMS).',
+      'Different RDBMSs have extended the language in different ways, such as altering query output or adding custom constraints.'
     ],
   },
   {
     Technology: 'Flask',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Flask_(web_framework)',
     Description: [
-      '',
+      'A micro web framework for Python servers and web applications.',
+      'Has extensions for adding features of other, more robust web frameworks.',
     ],
   },
   {
     Technology: 'Pipenv',
-    Website: '',
+    Website: 'https://pypi.org/project/pipenv/',
     Description: [
-      '',
-    ],
-  },
-  {
-    Technology: 'AutoHotKey',
-    Website: '',
-    Description: [
-      '',
+      'A tool that combines PIP and VitualENV for simple and contained python dependency management.',
+      'Prevents bloat and conflicts in the global environment.',
     ],
   },
   {
     Technology: 'GraphQL',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/GraphQL',
     Description: [
-      '',
+      'A data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.',
+      'The query and answer both share the same shape.',
     ],
   },
   {
     Technology: 'Pandas',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Pandas_(software)',
     Description: [
-      '',
+      'A software library written for Python for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series.',
     ],
   },
   {
     Technology: 'styled-components',
-    Website: '',
+    Website: 'https://styled-components.com/docs',
     Description: [
-      '',
+      'A JavaScript library for React.js which adds programmable CSS styling to component constructors.',
+      'Includes many additional features of CSS preprocessors (SASS, LESS, etc.).',
     ],
   },
   {
     Technology: 'bcrypt',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Bcrypt',
     Description: [
-      '',
+      'A password-hashing function based on the Blowfish cipher incorporating a salt to protect against rainbow table attacks and a slowness factor to resist brute-force search attacks.',
     ],
   },
   {
     Technology: 'Markdown',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Markdown',
     Description: [
-      '',
+      'A lightweight markup language with plain-text-formatting syntax creating rich text output from similarly readable plain text input.',
     ],
   },
   {

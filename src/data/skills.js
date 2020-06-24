@@ -335,149 +335,168 @@ const data = [
   },
   {
     Technology: 'PIP',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Pip_(package_manager)',
     Description: [
-      '',
+      'The standard package-management system used to install and manage software packages written in Python',
+      'Used to install individual packages or, more commonly, a list of packages in a "requirements.txt" file.',
     ],
   },
   {
-    Technology: 'Spring',
-    Website: '',
+    Technology: 'Spring Framework',
+    Website: 'https://en.wikipedia.org/wiki/Spring_Framework',
     Description: [
-      '',
+      'An application framework and inversion of control container for the Java platform.',
+      'Used with many extensions for building web applications on top of the Java EE (Enterprise Edition) platform.',
     ],
   },
   {
     Technology: 'Spring Boot',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Spring_Framework#Spring_Boot',
     Description: [
-      '',
+      'A Spring Framework extension for simplifying the creation of stand-alone, production-grade Java applications.',
     ],
   },
   {
-    Technology: 'Maven',
-    Website: '',
+    Technology: 'Apache Maven',
+    Website: 'https://maven.apache.org',
     Description: [
-      '',
+      'A software project management and comprehension tool, used for installing, extending, and building Java packages.',
     ],
   },
   {
     Technology: 'Create React App',
-    Website: '',
+    Website: 'https://reactjs.org/docs/create-a-new-react-app.html',
     Description: [
-      '',
+      'An integrated toolchain for creating and managing React.js applications.',
+      'Does not support static or server-side rendering, by default.',
     ],
   },
   {
-    Technology: 'GatsbyJS',
-    Website: '',
+    Technology: 'Gatsby.js',
+    Website: 'https://www.gatsbyjs.org/docs',
     Description: [
-      '',
+      'A toolchain and build tool for creating and managing React.js applications.',
+      'Features GraphQL and a wide range of plugins for building static files for deployment without a server.',
     ],
   },
   {
     Technology: 'Heroku',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Heroku',
     Description: [
-      '',
+      'A cloud platform as a service (PaaS) featuring simplicity of continuous integration and deployment.',
     ],
   },
   {
     Technology: 'JUnit',
-    Website: '',
+    Website: 'https://junit.org/junit4',
     Description: [
-      '',
+      'JUnit is a simple framework to write repeatable tests for Java applications.',
     ],
   },
   {
     Technology: 'AWS',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Amazon_Web_Services',
     Description: [
-      '',
+      'Amazon Web Services provides on-demand cloud computing platforms and APIs on a metered pay-as-you-go basis.',
     ],
   },
   {
     Technology: 'Apache Tomcat',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Apache_Tomcat',
     Description: [
-      '',
+      'An open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.',
+      'Used as the default servlet for Spring Web MVC applications.',
     ],
   },
   {
     Technology: 'Netty',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Netty_(software)',
     Description: [
-      '',
+      'A non-blocking I/O client-server framework for the development of Java network applications.',
+      'Used as the default server for Spring WebFlux applications.'
+    ],
+  },
+  {
+    Technology: 'Hibernate',
+    Website: 'https://en.wikipedia.org/wiki/Hibernate_(framework)',
+    Description: [
+      'An object-relational mapping (ORM) tool for the Java programming language, for mapping an object-oriented domain model to a relational database.',
+      'Used as the default data access technology behind Spring Data JPA, Spring Data JDBC, and more.'
     ],
   },
   {
     Technology: 'Kubernetes',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Kubernetes',
     Description: [
-      '',
+      'An open-source container-orchestration system for automating application deployment, scaling, and management.',
     ],
   },
   {
     Technology: 'Docker',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Docker_(software)',
     Description: [
-      '',
+      'A set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in containers.',
+      'Containers are isolated bundles of software and its libraries and configurations, all run by a single operating system kernel using fewer resources than virtual machines.',
+      'Often used with Kubernetes for scaling and network handling.'
     ],
   },
   {
     Technology: 'Yarn',
-    Website: '',
+    Website: 'https://yarnpkg.com/getting-started',
     Description: [
-      '',
+      'Yarn is a package manager for JavaScript modules also using NPM registry.',
+      'Features greater installation speed and extra automated dependency conflict resolution than NPM.',
     ],
   },
   {
     Technology: 'Webpack',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Webpack',
     Description: [
-      '',
+      'A JavaScript bundler which generates static assets from module dependencies and web application assets.',
     ],
   },
   {
     Technology: 'Babel',
-    Website: '',
+    Website: 'https://babeljs.io/docs/en',
     Description: [
-      '',
+      'A toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments/',
     ],
   },
   {
     Technology: 'MongoDB',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/MongoDB',
     Description: [
-      '',
+      'A NoSQL database program using JSON-like documents with optional schemas.',
+      'Outperforms SQL databases for simple queries.',
     ],
   },
   {
     Technology: 'Netlify',
-    Website: '',
+    Website: 'https://docs.netlify.com',
     Description: [
-      '',
+      'A cloud platform as a service (PaaS) featuring simplicity of continuous integration and deployment for front ends and serverless APIs.',
     ],
   },
   {
     Technology: 'Vercel',
-    Website: '',
+    Website: 'https://vercel.com',
     Description: [
-      '',
+      'A cloud platform as a service (PaaS) featuring simplicity of continuous integration and deployment for front ends and serverless APIs.',
     ],
   },
   {
     Technology: 'Cloudflare',
-    Website: '',
+    Website: 'https://en.wikipedia.org/wiki/Cloudflare',
     Description: [
-      '',
+      'A combination of content-delivery-network (CDN) services, DDoS mitigation, Internet security, and distributed domain-name-server services.',
     ],
   },
   {
     Technology: 'Figma',
-    Website: '',
+    Website: 'https://www.figma.com',
     Description: [
-      '',
+      'A cloud software as a service (SaaS) for UI/UX design, prototyping, and collaboration.',
+      'A web application most similar to Sketch in features, but without Mac OS requirement.',
     ],
   },
 ]

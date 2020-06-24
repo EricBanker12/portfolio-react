@@ -26,7 +26,7 @@ function Project({ pageContext, data }) {
           {name: `twitter:image`, content: seoImage},
         ]}
       />
-      <NavLink to="/projects" style={{display: 'inline-block', marginTop: '1em'}}><FaArrowLeft/> Back&nbsp;</NavLink>
+      <NavLink to="/projects" style={{marginTop: '1em'}}><FaArrowLeft/> Back&nbsp;</NavLink>
       <Header title={<a href={website}>{title}</a>} />
 
       {!video && (

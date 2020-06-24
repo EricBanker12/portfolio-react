@@ -46,6 +46,7 @@ function Layout({children}) {
         boxSizing: 'border-box',
         width: '100%',
         maxWidth: '52.5rem',
+        minWidth: 320,
         padding: '2.5rem',
         backgroundColor: 'white',
       }}>

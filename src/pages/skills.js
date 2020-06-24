@@ -1,21 +1,33 @@
 import React from 'react'
+import Highlight from 'react-highlight-words'
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
-  TableRow,
   TableSortLabel,
   TextField,
+  Checkbox,
+  FormControlLabel,
 } from '@material-ui/core'
 
 import Layout from '../components/Layout'
 import skillsData from './../data/skills'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
+import TableRowMobile from '../components/TableRowMobile'
+
+const categories = ['Technology', 'Description']
 
 class Skills extends React.Component {
-  state = {activeLabel: 'technology', activeDirection: 'desc', filter: ''}
+  state = {
+    activeLabel: 'Technology',
+    activeDirection: 'desc',
+    filter: '',
+    filterRegExp: new RegExp(''),
+    filterIgnoreCase: true,
+    filterExclude: {},
+  }
 
   labelClickHandler = (event) => {
     const name = event.currentTarget.getAttribute('name')
@@ -30,6 +42,30 @@ class Skills extends React.Component {
     }
   }
 
+  filterHandler = (event) => {
+    try {
+      const filter = event.target.value.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
+      const filterRegExp = new RegExp(filter, this.state.filterIgnoreCase ? 'i' : '')
+      this.setState({filter: event.target.value, filterRegExp})
+    }
+    catch (err) {
+      console.error(err.message)
+      this.setState({filter: event.target.value})
+    }
+  }
+
+  filterIgnoreCaseHandler = (event) => {
+    try {
+      const filter = this.state.filter.replace(/(\\|\^|\$|\*|\+|\?|\.|\(|\)|\{|\}|\[|\])/g, '\\$1')
+      const filterRegExp = new RegExp(filter, event.target.checked ? 'i' : '')
+      this.setState({filterIgnoreCase: event.target.checked, filterRegExp})
+    }
+    catch (err) {
+      console.error(err.message)
+      this.setState({filterIgnoreCase: event.target.checked})
+    }
+  }
+
   sortTableHandler = (a, b) => {
     // sorts strings alphabetically and numbers numerically
     a = a[this.state.activeLabel]
@@ -38,6 +74,11 @@ class Skills extends React.Component {
     if (typeof a === 'string') {
       a = a.toLowerCase()
       b = b.toLowerCase()
+    }
+
+    if (Array.isArray(a)) {
+      a = a.join('\n').length
+      b = b.join('\n').length
     }
 
     if (a === b) return 0
@@ -63,17 +104,12 @@ class Skills extends React.Component {
 
   filterTableHandler = (skill) => {
     if (!this.state.filter) return true
+
+    for (let category of categories) {
+      if (!this.state.filterExclude[category] && this.state.filterRegExp.test(skill[category])) return true
+    }
     
-    try {
-      const filter = new RegExp(this.state.filter, 'i')
-      if (filter.test(skill.technology)) return true
-      if (filter.test(skill.category)) return true
-      if (filter.test(skill.field)) return true
-      return false
-    }
-    catch (err) {
-      return true
-    }
+    return false
   }
 
   render() {
@@ -85,69 +121,85 @@ class Skills extends React.Component {
 
         <TextField
           label='Filter'
-          placeholder='Type a Technology, Category, or Field. Separate multiple filters with a | character.'
+          placeholder='Use | to multi-filter: C++|Python'
           style={{width: '100%'}}
           value={this.state.filter}
-          onChange={(e) => {this.setState({filter: e.target.value})}} />
-        <div style={{maxWidth: '100%', overflow: 'auto'}}>
-          <Table style={{width: '100%'}}>
-            
-            <TableHead>
-              <TableRow>
-                <TableCell>
+          onChange={this.filterHandler}
+        />
+        
+        <FormControlLabel label='Ignore Case' control={
+          <Checkbox
+            style={{color: '#4078c0'}}
+            color='primary'
+            checked={this.state.filterIgnoreCase}
+            onChange={this.filterIgnoreCaseHandler}
+          />
+        }/>
+
+        {categories.map(category => (
+          <FormControlLabel key={category} label={`Apply to ${category}`} control={
+            <Checkbox
+              style={{color: '#4078c0'}}
+              color='primary'
+              checked={!this.state.filterExclude[category]}
+              onChange={(e) => {
+                this.state.filterExclude[category] = !e.target.checked
+                this.setState({filterExclude: this.state.filterExclude})
+              }}
+            />
+          }/>
+        ))}
+
+        <Table style={{width: '100%'}}>
+          <TableHead>
+            <TableRowMobile>
+              {categories.map(category => (
+                <TableCell key={category}>
                   <TableSortLabel
-                    name='technology'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
+                    name={category}
+                    style={{fontWeight: 'bold'}}
                     onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'technology'}
-                    direction={this.state.activeLabel === 'technology' ? this.state.activeDirection : 'desc'}>
-                    Technology
+                    active={this.state.activeLabel === category}
+                    direction={this.state.activeLabel === category ? this.state.activeDirection : 'desc'}>
+                    {category}
                   </TableSortLabel>
                 </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='category'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'category'}
-                    direction={this.state.activeLabel === 'category' ? this.state.activeDirection : 'desc'}>
-                    Category
-                  </TableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <TableSortLabel
-                    name='field'
-                    style={{fontSize: '0.875rem', fontWeight: 'bold'}}
-                    onClick={this.labelClickHandler}
-                    active={this.state.activeLabel === 'field'}
-                    direction={this.state.activeLabel === 'field' ? this.state.activeDirection : 'desc'}>
-                    Field
-                  </TableSortLabel>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            
-            <TableBody>
-              {skillsData
-                .filter(this.filterTableHandler)
-                .sort(this.sortTableHandler)
-                .map((skill) => (
-                <TableRow key={skill.technology}>
-                  <TableCell>
-                    {skill.technology}
-                  </TableCell>
-                  <TableCell>
-                    {skill.category}
-                  </TableCell>
-                  <TableCell>
-                    {skill.field}
-                  </TableCell>
-                </TableRow>
               ))}
-            </TableBody>
-          
-          </Table>
-        </div>
+            </TableRowMobile>
+          </TableHead>
+
+          <TableBody>
+            {skillsData
+              .filter(this.filterTableHandler)
+              .sort(this.sortTableHandler)
+              .map((skill) => (
+              <TableRowMobile key={skill.Technology}>
+                <TableCell>
+                  <a href={skill.Website}>
+                    <Highlight
+                      caseSensitive={!this.state.filterIgnoreCase}
+                      searchWords={[!this.state.filterExclude.Technology ? this.state.filterRegExp : '']}
+                      textToHighlight={skill.Technology}
+                    />
+                  </a>
+                </TableCell>
+                <TableCell>
+                  <ul style={{marginLeft: '1rem'}}>
+                    {skill.Description.map((bullet, i) => (
+                      <li key={i}>
+                        <Highlight
+                          caseSensitive={!this.state.filterIgnoreCase}
+                          searchWords={[!this.state.filterExclude.Description ? this.state.filterRegExp : '']}
+                          textToHighlight={bullet}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </TableCell>
+              </TableRowMobile>
+            ))}
+          </TableBody>
+        </Table>
 
       </Layout>
     )

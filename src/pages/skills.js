@@ -5,7 +5,6 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableRow,
   TableSortLabel,
   TextField,
   Checkbox,
@@ -16,6 +15,7 @@ import Layout from '../components/Layout'
 import skillsData from './../data/skills'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
+import TableRowMobile from '../components/TableRowMobile'
 
 const categories = ['Technology', 'Description']
 
@@ -152,7 +152,7 @@ class Skills extends React.Component {
 
         <Table style={{width: '100%'}}>
           <TableHead>
-            <TableRow>
+            <TableRowMobile>
               {categories.map(category => (
                 <TableCell key={category}>
                   <TableSortLabel
@@ -165,7 +165,7 @@ class Skills extends React.Component {
                   </TableSortLabel>
                 </TableCell>
               ))}
-            </TableRow>
+            </TableRowMobile>
           </TableHead>
 
           <TableBody>
@@ -173,7 +173,7 @@ class Skills extends React.Component {
               .filter(this.filterTableHandler)
               .sort(this.sortTableHandler)
               .map((skill) => (
-              <TableRow key={skill.Technology}>
+              <TableRowMobile key={skill.Technology}>
                 <TableCell>
                   <a href={skill.Website}>
                     <Highlight
@@ -196,7 +196,7 @@ class Skills extends React.Component {
                     ))}
                   </ul>
                 </TableCell>
-              </TableRow>
+              </TableRowMobile>
             ))}
           </TableBody>
         </Table>

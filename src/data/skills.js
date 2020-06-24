@@ -499,6 +499,22 @@ const data = [
       'A web application most similar to Sketch in features, but without Mac OS requirement.',
     ],
   },
+  {
+    Technology: 'Trello',
+    Website: 'https://www.figma.com',
+    Description: [
+      'A web-based Kanban-style list-making application for project management and collaboration.',
+      'Developed by Atlassian, the same company developing JIRA, using similar UI and features.',
+    ],
+  },
+  {
+    Technology: 'Regular Expression',
+    Website: 'https://en.wikipedia.org/wiki/Regular_expression',
+    Description: [
+      'A sequence of characters that define a search pattern.',
+      'Used by string searching algorithms for "find" or "find and replace" or for input validation.',
+    ],
+  },
 ]
 
 export default data

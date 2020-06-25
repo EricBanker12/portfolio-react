@@ -42,7 +42,7 @@ function SiteIndex() {
       
       <Header title='Home' next='Skills'/>
 
-      {homeData.map(str => <p>{str}</p>)}
+      {homeData.map((str, i) => <p key={i}>{str}</p>)}
 
       <GatsbyImage
         fluid={fluid}

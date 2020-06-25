@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
       <footer id='contact'>
-        <h4>Eric Banker | Full-Stack Web Developer</h4>
+        <h4>Eric Banker | Full Stack Web Developer</h4>
         <p>I am always open to email, text message, and voicemail.</p>
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <a href={`tel:${contactData.phone}`}><FaPhoneSquare/> {contactData.phone}&nbsp;</a>

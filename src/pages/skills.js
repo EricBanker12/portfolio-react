@@ -184,7 +184,7 @@ class Skills extends React.Component {
                   </a>
                 </TableCell>
                 <TableCell>
-                  <ul style={{marginLeft: '1rem'}}>
+                  <ul style={{paddingLeft: '1rem'}}>
                     {skill.Description.map((bullet, i) => (
                       <li key={i}>
                         <Highlight

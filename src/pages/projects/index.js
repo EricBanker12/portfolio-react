@@ -51,8 +51,9 @@ function projectIndex() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    margin: '1rem 0',
                   }}>
-                  <h4>{p.title}</h4>
+                  <h2>{p.title}</h2>
                   <GatsbyImage
                     fluid={data.image.nodes.find(node => p.image == node.childImageSharp.fluid.originalName).childImageSharp.fluid}
                     alt={p.title}

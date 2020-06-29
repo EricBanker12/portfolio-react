@@ -1,17 +1,11 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
-import Typography from 'typography'
-import githubTheme from 'typography-theme-github'
 import BackgroundImage from 'gatsby-background-image'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 import '../styles/layout.css'
-
-const typography = new Typography(githubTheme)
-
-typography.injectStyles()
 
 function Layout({children}) {
 

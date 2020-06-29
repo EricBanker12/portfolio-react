@@ -8,11 +8,11 @@ const Header = ({title, next, path}) => {
 
   return (
     <header style={{position: 'relative'}}>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       {next && (
         <NavLink
           to={path}
-          style={{position: 'absolute', top:0, right:0}}
+          style={{position: 'absolute', top:'0.5rem', right:0}}
         >
           &nbsp;{next} <FaArrowRight/>
         </NavLink>

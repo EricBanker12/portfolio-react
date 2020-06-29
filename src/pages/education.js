@@ -14,10 +14,10 @@ class Education extends React.Component {
         <Header title='Education' next='Home' path='/' />
 
         {educationData.map((data, index) => (
-          <div key={index}>
+          <div key={index} style={{padding: '1rem 0'}}>
             <div style={{display: 'flex'}}>
-              <h4>{data.title}</h4>
-              <span style={{marginTop: '1.375rem'}}>&nbsp;| {data.time}</span>
+              <h2>{data.title}</h2>
+              <span>&nbsp;| {data.time}</span>
             </div>
             {data.paragraphs.map((paragraphs, i) => (
               <p key={i}>{paragraphs}</p>

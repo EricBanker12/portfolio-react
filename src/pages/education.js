@@ -14,7 +14,7 @@ class Education extends React.Component {
         <Header title='Education' next='Home' path='/' />
 
         {educationData.map((data, index) => (
-          <div key={index} style={{padding: '1rem 0'}}>
+          <div key={index} style={{paddingBottom: '1rem'}}>
             <div style={{display: 'flex'}}>
               <h2>{data.title}</h2>
               <span>&nbsp;| {data.time}</span>

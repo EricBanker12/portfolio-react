@@ -150,7 +150,7 @@ class Skills extends React.Component {
           }/>
         ))}
 
-        <Table style={{width: '100%'}}>
+        <Table style={{width: '100%'}} size='small'>
           <TableHead>
             <TableRowMobile>
               {categories.map(category => (

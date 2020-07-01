@@ -1,0 +1,22 @@
+{
+  "id": 7,
+  "title": "Portfolio",
+  "image": "image7.jpg",
+  "color": "#4078c0",
+  "background": "#ffffff",
+  "paragraphs": [
+    "A single-page web application showcasing background, skills, and completed projects."
+  ],
+  "bullets": [
+    "Solely designed and developed the entire site, programmed a filterable skills table, configured search engine optimization (SEO) meta tags, and implemented first render optimized image lazy loading.",
+    "Utilized GraphQL to query data (from local json or any cloud-based CMS) to generate project pages from a template and optimally resized images with a build script.",
+    "Built using CSS, Cloudflare, Gatsby.js, GitHub, GraphQL, JavaScript, Material-UI, React.js, and styled-components."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/EricBanker12/portfolio-react",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://www.EricBanker.com"
+}

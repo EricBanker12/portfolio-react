@@ -150,7 +150,7 @@ class Skills extends React.Component {
           }/>
         ))}
 
-        <Table style={{width: '100%'}}>
+        <Table style={{width: '100%'}} size='small'>
           <TableHead>
             <TableRowMobile>
               {categories.map(category => (
@@ -184,7 +184,7 @@ class Skills extends React.Component {
                   </a>
                 </TableCell>
                 <TableCell>
-                  <ul style={{marginLeft: '1rem'}}>
+                  <ul style={{paddingLeft: '1rem'}}>
                     {skill.Description.map((bullet, i) => (
                       <li key={i}>
                         <Highlight

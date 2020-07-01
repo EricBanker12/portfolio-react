@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
 html, body, #___gatsby, #gatsby-focus-wrapper {
     margin: 0;
     padding: 0;
@@ -10,4 +12,35 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 
 body {
     background: fixed linear-gradient(180deg, rgb(64, 120, 192), rgba(64, 120, 192, 0.5));
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    color: #444;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+p, ol, ul, li {
+    margin: 1rem 0;
+}
+
+ol, ul {
+    padding-left: 2rem;
+}
+
+a {
+    color: #4078c0;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
 }

@@ -25,7 +25,7 @@ class Education extends React.Component {
             <ul>
               {data.bullets.map((bullet, i) => {
                 if (typeof bullet === 'string') return <li key={i}>{bullet}</li>
-                else return <li key={i}><a href={bullet.link}>{bullet.text}</a></li>
+                else return <li key={i}><a href={bullet.link} target="_blank" rel="external nofollow">{bullet.text}</a></li>
               })}
             </ul>
           </div>

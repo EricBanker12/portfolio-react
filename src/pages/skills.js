@@ -175,7 +175,7 @@ class Skills extends React.Component {
               .map((skill) => (
               <TableRowMobile key={skill.Technology}>
                 <TableCell>
-                  <a href={skill.Website}>
+                  <a href={skill.Website} target="_blank" rel="external nofollow">
                     <Highlight
                       caseSensitive={!this.state.filterIgnoreCase}
                       searchWords={[!this.state.filterExclude.Technology ? this.state.filterRegExp : '']}

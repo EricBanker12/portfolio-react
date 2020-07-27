@@ -12,8 +12,8 @@ class Footer extends Component {
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <a href={`tel:${contactData.phone}`}><FaPhoneSquare/> {contactData.phone}&nbsp;</a>
           <a href={`mailto:${contactData.email}`}><FaEnvelope/> {contactData.email}&nbsp;</a>
-          <a href={contactData.github}><FaGithub/> GitHub&nbsp;</a>
-          <a href={contactData.linkedin}><FaLinkedin/> LinkedIn&nbsp;</a>
+          <a href={contactData.github} target="_blank" rel="external nofollow"><FaGithub/> GitHub&nbsp;</a>
+          <a href={contactData.linkedin} target="_blank" rel="external nofollow"><FaLinkedin/> LinkedIn&nbsp;</a>
         </div>
       </footer>
     )

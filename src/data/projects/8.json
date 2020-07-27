@@ -1,0 +1,22 @@
+{
+  "id": 8,
+  "title": "Flap with Friends",
+  "image": "image8.jpg",
+  "color": "#75caeb",
+  "background": "#ffffff",
+  "paragraphs": [
+    "A web remake of the infamous Flappy Bird video game, utilizing WebGL for performance and built into a Docker container for portability."
+  ],
+  "bullets": [
+    "Solely designed and developed the entire web application from planning, research, and prototyping to programing, quality assurance, deployment, and gathering feedback.",
+    "Constructed a themed and responsive single page application with customized Bootstrap 4.0 styling, optimized search engine meta tags (SEO), and utilized many of the newest technologies and web protocols.",
+    "Built using Bash (Unix shell), Bootstrap, Cloudflare, CSS, Docker, Figma, Gatsby.js, Java 8, JavaScript, Kubernetes, Pixi.js, React.js, Redux, Spring Boot, and Spring WebFlux."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/EricBanker12/flap-with-friends",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://flapwithfriends.tk"
+}

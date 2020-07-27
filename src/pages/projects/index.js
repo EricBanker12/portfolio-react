@@ -35,7 +35,7 @@ function projectIndex() {
   return (
     <Layout>
       
-      <SEO title='Projects'/>
+      <SEO title='Projects' path='/projects'/>
       <Header title='Projects' next='Education'/>
 
       <p>Click on a project to view details.</p>

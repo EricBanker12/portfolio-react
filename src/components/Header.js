@@ -12,8 +12,7 @@ const Header = ({title, next, path}) => {
       {next && (
         <NavLink
           to={path}
-          style={{position: 'absolute', top:'0.5rem', right:0}}
-        >
+          style={{position: 'absolute', top:'0.5rem', right:0}}>
           &nbsp;{next} <FaArrowRight/>
         </NavLink>
       )}

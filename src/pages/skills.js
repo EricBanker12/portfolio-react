@@ -116,7 +116,7 @@ class Skills extends React.Component {
     return (
       <Layout>
 
-        <SEO title='Skills'/>
+        <SEO title='Skills' path='/skills'/>
         <Header title='Skills' next='Projects'/>
 
         <TextField

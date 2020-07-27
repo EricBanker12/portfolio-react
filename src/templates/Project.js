@@ -10,7 +10,7 @@ import NavLink from '../components/NavLink'
 
 function Project({ pageContext, data }) {
   
-  const { title, website, video, paragraphs, bullets, links } = pageContext
+  const { id, title, website, video, paragraphs, bullets, links } = pageContext
   const fluid = data.file.childImageSharp.fluid
   const site = data.site.siteMetadata.siteUrl
   const seoImage = site + fluid.src
@@ -21,6 +21,7 @@ function Project({ pageContext, data }) {
       <SEO
         title={title}
         description={paragraphs[0]}
+        path={`/projects/${id}`}
         meta={[
           {property: `og:image`, content: seoImage},
           {name: `twitter:image`, content: seoImage},

@@ -10,7 +10,7 @@ class Education extends React.Component {
     return (
       <Layout>
 
-        <SEO title='Education'/>
+        <SEO title='Education' path='/education'/>
         <Header title='Education' next='Home' path='/' />
 
         {educationData.map((data, index) => (

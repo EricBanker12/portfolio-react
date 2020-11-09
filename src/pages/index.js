@@ -45,6 +45,7 @@ function SiteIndex() {
       {homeData.map((str, i) => <p key={i}>{str}</p>)}
 
       <GatsbyImage
+        style={{marginTop: '1rem'}}
         fluid={fluid}
         alt='Eric Banker'
       />

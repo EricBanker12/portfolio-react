@@ -527,7 +527,7 @@ const data = [
     Technology: 'C#',
     Website: 'https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29',
     Description: [
-      'C# is a type-safe object-oriented programming language designed by Microsoft alongside the .NET ecosystem.',
+      'A type-safe object-oriented programming language designed by Microsoft alongside the .NET ecosystem.',
     ],
   },
   {

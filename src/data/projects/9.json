@@ -1,0 +1,22 @@
+{
+  "id": 9,
+  "title": "Academic Analytics",
+  "image": "image9.jpg",
+  "color": "#254467",
+  "background": "#ffffff",
+  "paragraphs": [
+    "A business supporting higher education and academic research through data analysis, discovery, and growing connections."
+  ],
+  "bullets": [
+    "Collaborated as a software developer intern on a remote, cross-functional team of 9 developers and managers.",
+    "Contributed updates to internal software and programatically assembled and analyzed over 500,000 academic articles.",
+    "Utilized C#, Python, JavaScript, XLST/XPath, Regular Expression, TFVC, Visual Studio, and other technologies to collaboratively develop internal software and utilities."
+  ],
+  "links": [
+    {
+      "link": "https://academicanalytics.com/",
+      "text": "Company Website"
+    }
+  ],
+  "website": "https://academicanalytics.com/"
+}

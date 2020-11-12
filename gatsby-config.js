@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Eric Banker\'s Portfolio',
     author: 'Eric Banker',
-    description: 'I am Eric Banker, a Full-Stack Web Developer, and this is my portfolio.',
+    description: `I am Eric Banker, a Software Developer, specializing in web development and data analysis. Welcome to my portfolio!`,
     siteUrl: 'https://www.ericbanker.com',
   },
   plugins: [

@@ -515,6 +515,29 @@ const data = [
       'Used by string searching algorithms for "find" or "find and replace" or for input validation.',
     ],
   },
+  {
+    Technology: 'XSLT/XPath',
+    Website: 'https://en.wikipedia.org/wiki/XPath',
+    Description: [
+      'A query language for selecting nodes from an XML document.',
+      'Used by to conditionally select HTML document nodes or their content/attributes for manipulation or parsing data.',
+    ],
+  },
+  {
+    Technology: 'C#',
+    Website: 'https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29',
+    Description: [
+      'A type-safe object-oriented programming language designed by Microsoft alongside the .NET ecosystem.',
+    ],
+  },
+  {
+    Technology: 'Team Foundation Version Control (TFVC)',
+    Website: 'https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/what-is-tfvc',
+    Description: [
+      'A centralized version control system by Microsoft, integrated with Visual Studio.',
+      'Uses path-based branching and stores history only on a central server, compared to Git locally tracking all history and branching.',
+    ],
+  },
 ]
 
 export default data

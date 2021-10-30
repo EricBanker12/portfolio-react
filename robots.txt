@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.ericbanker.com/sitemap.xml
+Sitemap: https://www.ericbanker.com/sitemap/sitemap-index.xml
 Host: https://www.ericbanker.com

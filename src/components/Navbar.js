@@ -20,8 +20,8 @@ class Navbar extends React.Component {
         >
           <NavLink to={'/'}><FaHome /> Home&nbsp;</NavLink>
           <NavLink to={'/skills'}><FaCog /> Skills&nbsp;</NavLink>
-          <NavLink to={'/projects'}><FaShapes /> My Work&nbsp;</NavLink>
-          <NavLink to={'/education'}><FaGraduationCap /> Education&nbsp;</NavLink>
+          <NavLink to={'/projects'}><FaShapes /> Projects&nbsp;</NavLink>
+          <NavLink to={'/background'}><FaGraduationCap /> Background&nbsp;</NavLink>
           <NavLink to={'#contact'}><FaEnvelope /> Contact&nbsp;</NavLink>
         </nav>
       </header>

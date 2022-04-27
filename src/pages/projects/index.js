@@ -35,10 +35,10 @@ function projectIndex() {
   return (
     <Layout>
       
-      <SEO title='My Work' path='/projects'/>
-      <Header title='My Work' next='Education'/>
+      <SEO title='Projects' path='/projects'/>
+      <Header title='Projects' next='Background'/>
 
-      <p>Click on an item to view details.</p>
+      <p>Click on a project to view details.</p>
 
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', textAlign: 'center'}}>
         {data.json.nodes

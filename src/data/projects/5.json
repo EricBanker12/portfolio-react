@@ -24,6 +24,10 @@
     {
       "link": "https://github.com/BloomTech-Labs/story-squad-fe-archived",
       "text": "Front-End GitHub Repository"
+    },
+    {
+      "link": "https://story-squad.netlify.app/",
+      "text": "Web Deployment"
     }
   ],
   "website": "https://story-squad.netlify.app/"

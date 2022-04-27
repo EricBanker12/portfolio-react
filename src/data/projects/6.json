@@ -17,6 +17,10 @@
     {
       "link": "https://github.com/tower-maze",
       "text": "GitHub Repositories"
+    },
+    {
+      "link": "https://tower-maze.netlify.com/",
+      "text": "Web Deployment"
     }
   ],
   "website": "https://tower-maze.netlify.com/"

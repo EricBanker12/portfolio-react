@@ -13,6 +13,11 @@
     "Programmed functional, state managed forms for creation and editing of categorized list entries.",
     "Built using Axios, Bootstrap, JavaScript, and React.js."
   ],
-  "links": [],
+  "links": [
+    {
+      "link": "https://my-top-nine-app.netlify.com/",
+      "text": "Web Deployment"
+    }
+  ],
   "website": "https://my-top-nine-app.netlify.com/"
 }

@@ -13,11 +13,6 @@
     "Programmed functional, state managed forms for creation and editing of categorized list entries.",
     "Built using Axios, Bootstrap, JavaScript, and React.js."
   ],
-  "links": [
-    {
-      "link": "https://github.com/bw-my-top-nine/front-end",
-      "text": "GitHub Repository"
-    }
-  ],
+  "links": [],
   "website": "https://my-top-nine-app.netlify.com/"
 }

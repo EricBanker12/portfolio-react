@@ -538,6 +538,161 @@ const data = [
       'Uses path-based branching and stores history only on a central server, compared to Git locally tracking all history and branching.',
     ],
   },
+  {
+    Technology: 'Azure DevOps Server',
+    Website: 'https://en.wikipedia.org/wiki/Azure_DevOps_Server',
+    Description: [
+      'A Microsoft product that provides version control, reporting, requirements management, project management, automated builds, testing, and release management capabilities.',
+    ],
+  },
+  {
+    Technology: 'MSTest',
+    Website: 'https://docs.microsoft.com/en-us/dotnet/core/testing/#mstest',
+    Description: [
+      'Microsoft\'s test framework for all .NET languages, with functionality similar to xUnit and NUnit.',
+    ],
+  },
+  {
+    Technology: 'ASP.NET',
+    Website: 'https://en.wikipedia.org/wiki/ASP.NET',
+    Description: [
+      'An open-source, server-side web-application framework designed for web development to produce dynamic web pages.',
+      'Has multiple programming models for building modular web pages and APIs.'
+    ],
+  },
+  {
+    Technology: 'SQL Server Management Studio (SSMS)',
+    Website: 'https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15',
+    Description: [
+      'An integrated environment for managing any SQL infrastructure, with built in Microsoft Azure integration',
+    ],
+  },
+  {
+    Technology: 'Windows Presentation Foundation (WPF)',
+    Website: 'https://docs.microsoft.com/en-us/dotnet/desktop/wpf/overview/',
+    Description: [
+      'A UI framework for building Windows desktop apps, with more customization than Windows Forms.',
+    ],
+  },
+  {
+    Technology: '.NET Framework',
+    Website: 'https://docs.microsoft.com/en-us/dotnet/framework/get-started/overview',
+    Description: [
+      'A Windows only version of .NET which is being deprecated after version 4 for better cross-platform consolidation.',
+    ],
+  },
+  {
+    Technology: '.NET',
+    Website: 'https://docs.microsoft.com/en-us/dotnet/core/introduction',
+    Description: [
+      '.NET is a free, open-source development platform for building many kinds of apps, using the C# programming language.',
+    ],
+  },
+  {
+    Technology: 'Windows Forms (WinForms)',
+    Website: 'https://docs.microsoft.com/en-us/dotnet/desktop/winforms/overview/',
+    Description: [
+      'A UI framework for rapidly building Windows desktop apps, simpler than Windows Presentation Foundation.',
+    ],
+  },
+  {
+    Technology: 'Windows API (Win32 API)',
+    Website: 'https://docs.microsoft.com/en-us/windows/win32/desktop-programming',
+    Description: [
+      'The API for native C/C++ Windows applications that require direct access to Windows and hardware.',
+    ],
+  },
+  {
+    Technology: 'Microsoft Teams',
+    Website: 'https://en.wikipedia.org/wiki/Microsoft_Teams',
+    Description: [
+      'A communication suite platform catered toward businesses which lets users communicate with voice calls, video calls, text messaging, media and files, with built in Microsoft 365 integration.',
+    ],
+  },
+  {
+    Technology: 'Slack',
+    Website: 'https://en.wikipedia.org/wiki/Slack_(software)',
+    Description: [
+      'A communication platform catered toward businesses which lets users communicate with voice calls, video calls, text messaging, media and files.',
+    ],
+  },
+  {
+    Technology: 'Discord',
+    Website: 'https://en.wikipedia.org/wiki/Discord_(software)',
+    Description: [
+      'A communication platform which lets users communicate with voice calls, video calls, text messaging, media and files in private chats or as part of community servers.',
+    ],
+  },
+  {
+    Technology: 'Zoom',
+    Website: 'https://en.wikipedia.org/wiki/Zoom_(software)',
+    Description: [
+      'A video conferencing software used by businesses and academics which grew in popularity during the COVID-19 pandemic.',
+    ],
+  },
+  {
+    Technology: 'OBS Studio',
+    Website: 'https://obsproject.com/',
+    Description: [
+      'A free and open source software for video recording and live streaming.',
+    ],
+  },
+  {
+    Technology: 'Visual Studio',
+    Website: 'https://visualstudio.microsoft.com/vs/',
+    Description: [
+      'A comprehensive integrated development environment (IDE) for .NET and C++ developers on Windows.',
+    ],
+  },
+  {
+    Technology: 'Visual Studio Code',
+    Website: 'https://code.visualstudio.com/',
+    Description: [
+      'A free and open source text and code editor developed by Microsoft, with extensions to support just about any programming language.',
+    ],
+  },
+  {
+    Technology: 'GNU Image Manipulation Program (GIMP)',
+    Website: 'https://www.gimp.org/',
+    Description: [
+      'A free and open source rastorized graphics editor, with functionality similar to Adobe Photoshop.',
+    ],
+  },
+  {
+    Technology: 'Notepad++',
+    Website: 'https://notepad-plus-plus.org/',
+    Description: [
+      'A free and open source text and code editor, with functionality similar to Visual Studio Code.',
+    ],
+  },
+  {
+    Technology: 'Inkscape',
+    Website: 'https://inkscape.org/about/',
+    Description: [
+      'A free and open source vector graphics editor, with functionality similar to Adobe Illustrator.',
+    ],
+  },
+  {
+    Technology: 'Kdenlive',
+    Website: 'https://kdenlive.org/en/features/',
+    Description: [
+      'A free and open source video editor, with functionality similar to Adobe Premiere Pro or DaVinci Resolve.',
+    ],
+  },
+  {
+    Technology: 'Knockout (KO)',
+    Website: 'https://kdenlive.org/en/features/',
+    Description: [
+      'A JavaScript library for dynamic user interfaces with underlying data models, for a Model-View-ViewModel (MVVM) pattern.',
+    ],
+  },
+  {
+    Technology: 'Sencha Ext JS',
+    Website: 'https://www.sencha.com/products/extjs/',
+    Description: [
+      'A JavaScript framework for building data-intensive, cross-platform web and mobile applications for any modern device.',
+    ],
+  },
 ]
 
 export default data

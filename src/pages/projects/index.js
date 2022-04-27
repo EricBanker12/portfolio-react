@@ -19,7 +19,7 @@ function projectIndex() {
           paragraphs
         }
       }
-      image: allFile(filter: {relativePath: {regex: "/image\\d\\.jpg/"}}) {
+      image: allFile(filter: {relativePath: {regex: "/image\\d+\\.(jpg|png)/"}}) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 384, quality: 90) {
@@ -35,10 +35,10 @@ function projectIndex() {
   return (
     <Layout>
       
-      <SEO title='Projects' path='/projects'/>
-      <Header title='Projects' next='Education'/>
+      <SEO title='My Work' path='/projects'/>
+      <Header title='My Work' next='Education'/>
 
-      <p>Click on a project to view details.</p>
+      <p>Click on an item to view details.</p>
 
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', textAlign: 'center'}}>
         {data.json.nodes

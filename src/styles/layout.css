@@ -23,7 +23,7 @@ h1 {
     border-bottom: 1px solid #ddd;
 }
 
-h2 {
+h2, h3 {
     margin: 0;
     font-size: 1rem;
 }
@@ -43,4 +43,10 @@ a {
 
 a:hover, a:active {
     text-decoration: underline;
+}
+
+.section-head {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #ddd;
 }

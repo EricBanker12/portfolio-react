@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "title": "Debug Output Toasts",
+  "image": "image10.png",
+  "color": "#000000",
+  "background": "#ffffff",
+  "paragraphs": [
+    "A simple Windows Presentation Foundation (WPF) application which captures Windows debug api output messages, with optional filtering and \"toast\" notifications."
+  ],
+  "bullets": [
+    "Solely designed and developed a desktop application combining both high level and low level Windows operating system APIs for unique functionality.",
+    "Utilized C#, .NET, WPF, Win32 API, MSTest, and Git."
+  ],
+  "links": [
+    {
+      "link": "https://github.com/EricBanker12/DebugOutputToasts",
+      "text": "GitHub Repository"
+    }
+  ],
+  "website": "https://github.com/EricBanker12/DebugOutputToasts"
+}
